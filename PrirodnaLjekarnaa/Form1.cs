@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace PrirodnaLjekarnaa
 {
-    public partial class Form1 : Form
+    public partial class proizvodi_form : Form
     {
-        public Form1()
+        public proizvodi_form()
         {
             InitializeComponent();
         }
+
+        
     }
 }
