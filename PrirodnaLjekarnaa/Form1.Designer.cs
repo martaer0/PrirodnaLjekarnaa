@@ -233,18 +233,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(69, 57);
+            this.textBox1.Location = new System.Drawing.Point(12, 46);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(219, 34);
             this.textBox1.TabIndex = 6;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(103, 171);
+            this.listBox1.Location = new System.Drawing.Point(12, 86);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 84);
+            this.listBox1.Size = new System.Drawing.Size(219, 308);
             this.listBox1.TabIndex = 7;
             // 
             // Form1
