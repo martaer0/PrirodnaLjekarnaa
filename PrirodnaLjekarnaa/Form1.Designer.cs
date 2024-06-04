@@ -159,7 +159,7 @@
             this.oNamaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -233,19 +233,20 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 46);
+            this.textBox1.Location = new System.Drawing.Point(27, 44);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 34);
+            this.textBox1.Size = new System.Drawing.Size(230, 30);
             this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "Search nekakvi";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(12, 86);
+            this.listBox1.Location = new System.Drawing.Point(27, 86);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(219, 308);
+            this.listBox1.Size = new System.Drawing.Size(230, 308);
             this.listBox1.TabIndex = 7;
             // 
             // Form1

@@ -634,7 +634,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 40);
             this.button2.TabIndex = 21;
-            this.button2.Text = "button2";
+            this.button2.Text = "Izlaz";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -643,7 +643,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(91, 40);
             this.button4.TabIndex = 22;
-            this.button4.Text = "button4";
+            this.button4.Text = "Završi";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox1
