@@ -51,6 +51,7 @@
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -60,17 +61,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.Location = new System.Drawing.Point(35, 37);
+            this.label1.Location = new System.Drawing.Point(26, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 31);
+            this.label1.Size = new System.Drawing.Size(203, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dodaj novi proizvod";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(17, 60);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 49);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(257, 248);
+            this.pictureBox1.Size = new System.Drawing.Size(193, 202);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -79,14 +82,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label2.Location = new System.Drawing.Point(12, 18);
+            this.label2.Location = new System.Drawing.Point(9, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 26);
+            this.label2.Size = new System.Drawing.Size(103, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Dodaj sliku:";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox3);
@@ -97,18 +102,21 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(41, 71);
+            this.groupBox1.Location = new System.Drawing.Point(31, 58);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(671, 367);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(503, 298);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.2F);
-            this.button2.Location = new System.Drawing.Point(408, 319);
+            this.button2.Location = new System.Drawing.Point(306, 259);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 33);
+            this.button2.Size = new System.Drawing.Size(65, 27);
             this.button2.TabIndex = 11;
             this.button2.Text = "Dodaj";
             this.button2.UseVisualStyleBackColor = true;
@@ -116,43 +124,48 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.2F);
-            this.button1.Location = new System.Drawing.Point(515, 319);
+            this.button1.Location = new System.Drawing.Point(386, 259);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 33);
+            this.button1.Size = new System.Drawing.Size(65, 27);
             this.button1.TabIndex = 10;
             this.button1.Text = "Odustani";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(315, 206);
+            this.textBox3.Location = new System.Drawing.Point(236, 167);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(308, 93);
+            this.textBox3.Size = new System.Drawing.Size(232, 76);
             this.textBox3.TabIndex = 9;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(315, 110);
+            this.textBox2.Location = new System.Drawing.Point(236, 89);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(308, 65);
+            this.textBox2.Size = new System.Drawing.Size(232, 54);
             this.textBox2.TabIndex = 8;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(366, 46);
+            this.textBox1.Location = new System.Drawing.Point(274, 37);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 22);
+            this.textBox1.Size = new System.Drawing.Size(123, 20);
             this.textBox1.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(310, 82);
+            this.label5.Location = new System.Drawing.Point(232, 67);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(171, 25);
+            this.label5.Size = new System.Drawing.Size(135, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Ljekovita svojstva:";
             // 
@@ -160,9 +173,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(310, 178);
+            this.label4.Location = new System.Drawing.Point(232, 145);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 25);
+            this.label4.Size = new System.Drawing.Size(45, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Opis:";
             // 
@@ -170,9 +184,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(310, 42);
+            this.label3.Location = new System.Drawing.Point(232, 34);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 25);
+            this.label3.Size = new System.Drawing.Size(40, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Ime:";
             // 
@@ -188,7 +203,8 @@
             this.oNamaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -197,13 +213,13 @@
             this.naslovnicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ispisKorisnikaToolStripMenuItem});
             this.naslovnicaToolStripMenuItem.Name = "naslovnicaToolStripMenuItem";
-            this.naslovnicaToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
+            this.naslovnicaToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.naslovnicaToolStripMenuItem.Text = "Naslovnica";
             // 
             // ispisKorisnikaToolStripMenuItem
             // 
             this.ispisKorisnikaToolStripMenuItem.Name = "ispisKorisnikaToolStripMenuItem";
-            this.ispisKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.ispisKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.ispisKorisnikaToolStripMenuItem.Text = "Ispis korisnika";
             // 
             // proizvodiToolStripMenuItem
@@ -213,25 +229,25 @@
             this.kupiToolStripMenuItem,
             this.dodajNovoToolStripMenuItem});
             this.proizvodiToolStripMenuItem.Name = "proizvodiToolStripMenuItem";
-            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.proizvodiToolStripMenuItem.Text = "Proizvodi";
             // 
             // košaricaToolStripMenuItem
             // 
             this.košaricaToolStripMenuItem.Name = "košaricaToolStripMenuItem";
-            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.košaricaToolStripMenuItem.Text = "Košarica";
             // 
             // kupiToolStripMenuItem
             // 
             this.kupiToolStripMenuItem.Name = "kupiToolStripMenuItem";
-            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.kupiToolStripMenuItem.Text = "Kupi";
             // 
             // dodajNovoToolStripMenuItem
             // 
             this.dodajNovoToolStripMenuItem.Name = "dodajNovoToolStripMenuItem";
-            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.dodajNovoToolStripMenuItem.Text = "Dodaj novo";
             // 
             // doktorToolStripMenuItem
@@ -239,35 +255,46 @@
             this.doktorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.najčešćeBolestiToolStripMenuItem});
             this.doktorToolStripMenuItem.Name = "doktorToolStripMenuItem";
-            this.doktorToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.doktorToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.doktorToolStripMenuItem.Text = "Doktor";
             // 
             // najčešćeBolestiToolStripMenuItem
             // 
             this.najčešćeBolestiToolStripMenuItem.Name = "najčešćeBolestiToolStripMenuItem";
-            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.najčešćeBolestiToolStripMenuItem.Text = "Najčešće bolesti";
             // 
             // pomoćToolStripMenuItem
             // 
             this.pomoćToolStripMenuItem.Name = "pomoćToolStripMenuItem";
-            this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.pomoćToolStripMenuItem.Text = "Pomoć";
             // 
             // oNamaToolStripMenuItem
             // 
             this.oNamaToolStripMenuItem.Name = "oNamaToolStripMenuItem";
-            this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.oNamaToolStripMenuItem.Text = "O nama";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(37, 261);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form5";
             this.Text = "Dodaj novo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -305,5 +332,6 @@
         private System.Windows.Forms.ToolStripMenuItem najčešćeBolestiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
+        private System.Windows.Forms.Button button3;
     }
 }

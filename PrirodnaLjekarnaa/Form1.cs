@@ -17,6 +17,10 @@ namespace PrirodnaLjekarnaa
             InitializeComponent();
         }
 
-        
+        private void dodajNovoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 frmDodaj = new Form5();
+            frmDodaj.ShowDialog();  
+        }
     }
 }

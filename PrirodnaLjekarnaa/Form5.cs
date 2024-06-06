@@ -17,6 +17,16 @@ namespace PrirodnaLjekarnaa
             InitializeComponent();
         }
 
-        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image|*.png;*.jpg;*.bmp;*.gif;*.pdf";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox1.Image = Image.FromFile(@openFileDialog.FileName);
+                }
+            }
+        }
     }
 }
