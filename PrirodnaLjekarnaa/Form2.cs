@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PrirodnaLjekarnaa
 {
-    public partial class Kosarica : Form
+    public partial class Form2 : Form
     {
-        public Kosarica()
+        public Form2()
         {
             InitializeComponent();
         }

@@ -22,5 +22,28 @@ namespace PrirodnaLjekarnaa
             Form5 frmDodaj = new Form5();
             frmDodaj.ShowDialog();  
         }
+
+        private void proizvodiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void najčešćeBolestiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 frmDodaj = new Form3();
+            frmDodaj.ShowDialog();
+        }
+
+        private void oNamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form6 frmDodaj = new Form6();
+            frmDodaj.ShowDialog();
+        }
+
+        private void košaricaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 frmDodaj = new Form2();
+            frmDodaj.ShowDialog();
+        }
     }
 }

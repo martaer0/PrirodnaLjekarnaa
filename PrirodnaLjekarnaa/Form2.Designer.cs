@@ -1,6 +1,6 @@
 ﻿namespace PrirodnaLjekarnaa
 {
-    partial class Kosarica
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kosarica));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -191,7 +191,7 @@
             // ispisKorisnikaToolStripMenuItem
             // 
             this.ispisKorisnikaToolStripMenuItem.Name = "ispisKorisnikaToolStripMenuItem";
-            this.ispisKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ispisKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
             this.ispisKorisnikaToolStripMenuItem.Text = "Ispis korisnika";
             // 
             // proizvodiToolStripMenuItem
@@ -233,7 +233,7 @@
             // najčešćeBolestiToolStripMenuItem
             // 
             this.najčešćeBolestiToolStripMenuItem.Name = "najčešćeBolestiToolStripMenuItem";
-            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.najčešćeBolestiToolStripMenuItem.Text = "Najčešće bolesti";
             // 
             // pomoćToolStripMenuItem
@@ -248,7 +248,7 @@
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.oNamaToolStripMenuItem.Text = "O nama";
             // 
-            // Kosarica
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -259,7 +259,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Kosarica";
+            this.Name = "Form2";
             this.Text = "Košarica";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
