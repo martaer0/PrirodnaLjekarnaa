@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PrirodnaLjekarnaa
 {
-    public partial class Form5 : Form
+    public partial class Form6 : Form
     {
-        public Form5()
+        public Form6()
         {
             InitializeComponent();
         }
