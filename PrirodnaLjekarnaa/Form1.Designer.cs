@@ -40,17 +40,17 @@
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbPrijava = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonRegistracija = new System.Windows.Forms.Button();
+            this.buttonPrijaviSe = new System.Windows.Forms.Button();
+            this.tbPrezime = new System.Windows.Forms.TextBox();
+            this.tbIme = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonPrijava = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbPrijava.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +82,7 @@
             // ispisKorisnikaToolStripMenuItem
             // 
             this.ispisKorisnikaToolStripMenuItem.Name = "ispisKorisnikaToolStripMenuItem";
-            this.ispisKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ispisKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
             this.ispisKorisnikaToolStripMenuItem.Text = "Ispis korisnika";
             // 
             // proizvodiToolStripMenuItem
@@ -99,20 +99,20 @@
             // košaricaToolStripMenuItem
             // 
             this.košaricaToolStripMenuItem.Name = "košaricaToolStripMenuItem";
-            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.košaricaToolStripMenuItem.Text = "Košarica";
             this.košaricaToolStripMenuItem.Click += new System.EventHandler(this.košaricaToolStripMenuItem_Click);
             // 
             // kupiToolStripMenuItem
             // 
             this.kupiToolStripMenuItem.Name = "kupiToolStripMenuItem";
-            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.kupiToolStripMenuItem.Text = "Kupi";
             // 
             // dodajNovoToolStripMenuItem
             // 
             this.dodajNovoToolStripMenuItem.Name = "dodajNovoToolStripMenuItem";
-            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.dodajNovoToolStripMenuItem.Text = "Dodaj novo";
             this.dodajNovoToolStripMenuItem.Click += new System.EventHandler(this.dodajNovoToolStripMenuItem_Click);
             // 
@@ -127,7 +127,7 @@
             // najčešćeBolestiToolStripMenuItem
             // 
             this.najčešćeBolestiToolStripMenuItem.Name = "najčešćeBolestiToolStripMenuItem";
-            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.najčešćeBolestiToolStripMenuItem.Text = "Najčešće bolesti";
             this.najčešćeBolestiToolStripMenuItem.Click += new System.EventHandler(this.najčešćeBolestiToolStripMenuItem_Click);
             // 
@@ -144,23 +144,23 @@
             this.oNamaToolStripMenuItem.Text = "O nama";
             this.oNamaToolStripMenuItem.Click += new System.EventHandler(this.oNamaToolStripMenuItem_Click);
             // 
-            // groupBox1
+            // gbPrijava
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(498, 105);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(282, 323);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Visible = false;
+            this.gbPrijava.Controls.Add(this.pictureBox1);
+            this.gbPrijava.Controls.Add(this.buttonRegistracija);
+            this.gbPrijava.Controls.Add(this.buttonPrijaviSe);
+            this.gbPrijava.Controls.Add(this.tbPrezime);
+            this.gbPrijava.Controls.Add(this.tbIme);
+            this.gbPrijava.Controls.Add(this.label3);
+            this.gbPrijava.Controls.Add(this.label2);
+            this.gbPrijava.Location = new System.Drawing.Point(498, 105);
+            this.gbPrijava.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbPrijava.Name = "gbPrijava";
+            this.gbPrijava.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbPrijava.Size = new System.Drawing.Size(282, 323);
+            this.gbPrijava.TabIndex = 10;
+            this.gbPrijava.TabStop = false;
+            this.gbPrijava.Visible = false;
             // 
             // pictureBox1
             // 
@@ -173,43 +173,45 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // buttonRegistracija
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.button2.Location = new System.Drawing.Point(133, 250);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 32);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Registracija";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonRegistracija.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.buttonRegistracija.Location = new System.Drawing.Point(133, 250);
+            this.buttonRegistracija.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonRegistracija.Name = "buttonRegistracija";
+            this.buttonRegistracija.Size = new System.Drawing.Size(123, 32);
+            this.buttonRegistracija.TabIndex = 5;
+            this.buttonRegistracija.Text = "Registracija";
+            this.buttonRegistracija.UseVisualStyleBackColor = true;
+            this.buttonRegistracija.Click += new System.EventHandler(this.buttonRegistracija_Click);
             // 
-            // button1
+            // buttonPrijaviSe
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.button1.Location = new System.Drawing.Point(43, 250);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Prijava";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonPrijaviSe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.buttonPrijaviSe.Location = new System.Drawing.Point(43, 250);
+            this.buttonPrijaviSe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonPrijaviSe.Name = "buttonPrijaviSe";
+            this.buttonPrijaviSe.Size = new System.Drawing.Size(84, 32);
+            this.buttonPrijaviSe.TabIndex = 4;
+            this.buttonPrijaviSe.Text = "Prijava";
+            this.buttonPrijaviSe.UseVisualStyleBackColor = true;
+            this.buttonPrijaviSe.Click += new System.EventHandler(this.buttonPrijaviSe_Click);
             // 
-            // textBox2
+            // tbPrezime
             // 
-            this.textBox2.Location = new System.Drawing.Point(101, 178);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 22);
-            this.textBox2.TabIndex = 3;
+            this.tbPrezime.Location = new System.Drawing.Point(101, 178);
+            this.tbPrezime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPrezime.Name = "tbPrezime";
+            this.tbPrezime.Size = new System.Drawing.Size(168, 22);
+            this.tbPrezime.TabIndex = 3;
             // 
-            // textBox1
+            // tbIme
             // 
-            this.textBox1.Location = new System.Drawing.Point(101, 143);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 22);
-            this.textBox1.TabIndex = 2;
+            this.tbIme.Location = new System.Drawing.Point(101, 143);
+            this.tbIme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbIme.Name = "tbIme";
+            this.tbIme.Size = new System.Drawing.Size(168, 22);
+            this.tbIme.TabIndex = 2;
             // 
             // label3
             // 
@@ -229,15 +231,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Ime:";
             // 
-            // button3
+            // buttonPrijava
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.Location = new System.Drawing.Point(162, 424);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(212, 51);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Započni prijavu";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonPrijava.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonPrijava.Location = new System.Drawing.Point(162, 424);
+            this.buttonPrijava.Name = "buttonPrijava";
+            this.buttonPrijava.Size = new System.Drawing.Size(212, 51);
+            this.buttonPrijava.TabIndex = 11;
+            this.buttonPrijava.Text = "Započni prijavu";
+            this.buttonPrijava.UseVisualStyleBackColor = true;
+            this.buttonPrijava.Click += new System.EventHandler(this.buttonPrijava_Click);
             // 
             // Form1
             // 
@@ -246,17 +249,18 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(821, 535);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.buttonPrijava);
+            this.Controls.Add(this.gbPrijava);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Naslovnica";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbPrijava.ResumeLayout(false);
+            this.gbPrijava.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -276,15 +280,15 @@
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ispisKorisnikaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem najčešćeBolestiToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbPrijava;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonRegistracija;
+        private System.Windows.Forms.Button buttonPrijaviSe;
+        private System.Windows.Forms.TextBox tbPrezime;
+        private System.Windows.Forms.TextBox tbIme;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonPrijava;
     }
 }
 

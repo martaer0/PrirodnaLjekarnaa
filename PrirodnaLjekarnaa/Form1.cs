@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PrirodnaLjekarnaa
 {
@@ -44,6 +46,50 @@ namespace PrirodnaLjekarnaa
         {
             Form2 frmDodaj = new Form2();
             frmDodaj.ShowDialog();
+        }
+
+        private void buttonPrijava_Click(object sender, EventArgs e)
+        {
+            gbPrijava.Visible = true;
+            
+        }
+
+
+        //Dio za prijavu:
+
+        List<string> stringList = new List<string>();
+        
+
+        string FilePath = "KorisniciLjekarne.txt";
+
+        private void buttonPrijaviSe_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonRegistracija_Click(object sender, EventArgs e)
+        {
+            string linijaIme = tbIme.Text;
+            string linijaPrezime = tbPrezime.Text;
+
+            StreamWriter sw = new StreamWriter(FilePath, true);
+            if (linijaIme != "")
+            {
+                sw.WriteLine("{0}|{1}", linijaIme, linijaPrezime);
+                tbIme.Text = "";
+                tbPrezime.Text = "";
+
+                MessageBox.Show("Uspješna prijava!");
+
+            }
+
+
+            else
+            {
+                MessageBox.Show("Nisu uneseni podaci!");
+            }
+
+            sw.Close();
         }
     }
 }
