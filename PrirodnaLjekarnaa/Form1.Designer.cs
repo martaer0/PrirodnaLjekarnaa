@@ -57,6 +57,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.Enabled = false;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.naslovnicaToolStripMenuItem,
@@ -153,11 +154,11 @@
             this.gbPrijava.Controls.Add(this.tbIme);
             this.gbPrijava.Controls.Add(this.label3);
             this.gbPrijava.Controls.Add(this.label2);
-            this.gbPrijava.Location = new System.Drawing.Point(498, 105);
+            this.gbPrijava.Location = new System.Drawing.Point(513, 104);
             this.gbPrijava.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbPrijava.Name = "gbPrijava";
             this.gbPrijava.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbPrijava.Size = new System.Drawing.Size(282, 323);
+            this.gbPrijava.Size = new System.Drawing.Size(278, 323);
             this.gbPrijava.TabIndex = 10;
             this.gbPrijava.TabStop = false;
             this.gbPrijava.Visible = false;
@@ -199,18 +200,18 @@
             // 
             // tbPrezime
             // 
-            this.tbPrezime.Location = new System.Drawing.Point(101, 178);
+            this.tbPrezime.Location = new System.Drawing.Point(91, 178);
             this.tbPrezime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPrezime.Name = "tbPrezime";
-            this.tbPrezime.Size = new System.Drawing.Size(168, 22);
+            this.tbPrezime.Size = new System.Drawing.Size(178, 22);
             this.tbPrezime.TabIndex = 3;
             // 
             // tbIme
             // 
-            this.tbIme.Location = new System.Drawing.Point(101, 143);
+            this.tbIme.Location = new System.Drawing.Point(91, 143);
             this.tbIme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbIme.Name = "tbIme";
-            this.tbIme.Size = new System.Drawing.Size(168, 22);
+            this.tbIme.Size = new System.Drawing.Size(178, 22);
             this.tbIme.TabIndex = 2;
             // 
             // label3
@@ -227,7 +228,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.Location = new System.Drawing.Point(43, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 23);
+            this.label2.Size = new System.Drawing.Size(62, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Ime:";
             // 
