@@ -114,8 +114,6 @@ namespace PrirodnaLjekarnaa
             if (linijaIme != "" && linijaPrezime != "")
             {
                 sw.WriteLine("{0}|{1}", linijaIme, linijaPrezime);
-                //tbIme.Text = "";
-                //tbPrezime.Text = "";
 
                 MessageBox.Show("Uspješna registracija!");
                 gbPrijava.Visible = false;
