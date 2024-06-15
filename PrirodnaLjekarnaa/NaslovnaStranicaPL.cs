@@ -12,16 +12,16 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PrirodnaLjekarnaa
 {
-    public partial class Form1 : Form
+    public partial class NaslovnaStranicaPL : Form
     {
-        public Form1()
+        public NaslovnaStranicaPL()
         {
             InitializeComponent();
         }
     //povezivanje formi na MenuStrip
         private void dodajNovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form5 frmDodaj = new Form5();
+            DodajNovo frmDodaj = new DodajNovo();
             frmDodaj.ShowDialog();  
         }
 
@@ -32,19 +32,19 @@ namespace PrirodnaLjekarnaa
 
         private void najčešćeBolestiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 frmDodaj = new Form3();
+            NajcesceBolesti frmDodaj = new NajcesceBolesti();
             frmDodaj.ShowDialog();
         }
 
         private void oNamaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form6 frmDodaj = new Form6();
+            Onama frmDodaj = new Onama();
             frmDodaj.ShowDialog();
         }
 
         private void košaricaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 frmDodaj = new Form2();
+            Kosarica frmDodaj = new Kosarica();
             frmDodaj.ShowDialog();
         }
 

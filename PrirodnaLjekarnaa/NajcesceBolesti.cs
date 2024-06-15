@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PrirodnaLjekarnaa
 {
-    public partial class Form3 : Form
+    public partial class NajcesceBolesti : Form
     {
-        public Form3()
+        public NajcesceBolesti()
         {
             InitializeComponent();
         }

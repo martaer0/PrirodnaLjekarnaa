@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PrirodnaLjekarnaa
 {
-    public partial class Form5 : Form
+    public partial class DodajNovo : Form
     {
-        public Form5()
+        public DodajNovo()
         {
             InitializeComponent();
         }

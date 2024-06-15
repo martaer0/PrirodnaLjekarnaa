@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PrirodnaLjekarnaa
 {
-    public partial class Form4 : Form
+    public partial class Racun : Form
     {
-        public Form4()
+        public Racun()
         {
             InitializeComponent();
         }

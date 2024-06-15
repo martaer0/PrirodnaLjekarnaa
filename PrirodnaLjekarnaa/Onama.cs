@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace PrirodnaLjekarnaa
 {
-    public partial class Form2 : Form
+    public partial class Onama : Form
     {
-        public Form2()
+        public Onama()
         {
             InitializeComponent();
         }
 
-       
+        
     }
 }

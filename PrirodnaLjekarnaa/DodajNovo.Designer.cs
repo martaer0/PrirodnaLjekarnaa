@@ -1,6 +1,6 @@
 ﻿namespace PrirodnaLjekarnaa
 {
-    partial class Form5
+    partial class DodajNovo
     {
         /// <summary>
         /// Required designer variable.
