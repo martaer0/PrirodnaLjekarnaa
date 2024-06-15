@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
 	  <Compile Include="Admin.cs" />
 	  <Compile Include="NaslovnaStranicaPL.cs">
 		  <SubType>Form</SubType>
@@ -128,7 +129,40 @@
     </Compile>
     <Compile Include="PopisKupaca.Designer.cs">
       <DependentUpon>PopisKupaca.cs</DependentUpon>
+
     </Compile>
+    <Compile Include="Kosarica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kosarica.Designer.cs">
+      <DependentUpon>Kosarica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NajcesceBolesti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NajcesceBolesti.Designer.cs">
+      <DependentUpon>NajcesceBolesti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Racun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Racun.Designer.cs">
+      <DependentUpon>Racun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajNovo.Designer.cs">
+      <DependentUpon>DodajNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Onama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Onama.Designer.cs">
+      <DependentUpon>Onama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnik.cs" />
+    <Compile Include="ListaKorisnika.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Proizvodi.resx">
@@ -142,6 +176,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PopisKupaca.resx">
       <DependentUpon>PopisKupaca.cs</DependentUpon>
+    <EmbeddedResource Include="NaslovnaStranicaPL.resx">
+      <DependentUpon>NaslovnaStranicaPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kosarica.resx">
+      <DependentUpon>Kosarica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NajcesceBolesti.resx">
+      <DependentUpon>NajcesceBolesti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Racun.resx">
+      <DependentUpon>Racun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajNovo.resx">
+      <DependentUpon>DodajNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Onama.resx">
+      <DependentUpon>Onama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
