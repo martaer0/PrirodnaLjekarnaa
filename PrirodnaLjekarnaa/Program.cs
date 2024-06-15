@@ -16,7 +16,7 @@ namespace PrirodnaLjekarnaa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Proizvodi());
+            Application.Run(new NaslovnaStranicaPL());
         }
     }
 }
