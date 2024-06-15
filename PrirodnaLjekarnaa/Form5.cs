@@ -44,8 +44,8 @@ namespace PrirodnaLjekarnaa
 
             if (rbCajevi.Checked)
             {
-                string FilePath = "Cajevi.txt";
-                StreamWriter sw = new StreamWriter(FilePath, true);
+                
+                StreamWriter sw = new StreamWriter(Admin.FilePath1, true);
                 if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "")
                 {
                     sw.WriteLine("{0}\n{1}\n{2}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis);
@@ -62,8 +62,7 @@ namespace PrirodnaLjekarnaa
 
             else if (rbSokoviSirupi.Checked)
             {
-                string FilePath = "SokoviiSirupi.txt";
-                StreamWriter sw = new StreamWriter(FilePath, true);
+                StreamWriter sw = new StreamWriter(Admin.FilePath2, true);
                 if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "")
                 {
                     sw.WriteLine("{0}\n{1}\n{2}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis);
@@ -80,8 +79,7 @@ namespace PrirodnaLjekarnaa
 
             else if (rbEtericnaUlja.Checked)
             {
-                string FilePath = "EtericnaUlja.txt";
-                StreamWriter sw = new StreamWriter(FilePath, true);
+                StreamWriter sw = new StreamWriter(Admin.FilePath3, true);
                 if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "")
                 {
                     sw.WriteLine("{0}\n{1}\n{2}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis);
@@ -98,8 +96,7 @@ namespace PrirodnaLjekarnaa
 
             else if (rbKremeMasti.Checked)
             {
-                string FilePath = "KremeiMasti.txt";
-                StreamWriter sw = new StreamWriter(FilePath, true);
+                StreamWriter sw = new StreamWriter(Admin.FilePath4, true);
                 if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "")
                 {
                     sw.WriteLine("{0}\n{1}\n{2}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis);

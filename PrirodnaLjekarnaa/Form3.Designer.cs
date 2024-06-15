@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxListaBolesti = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lbxPreporuceniProizvodi = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -71,14 +71,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Najčešće bolesti i rješenja";
             // 
-            // listBox1
+            // lbxListaBolesti
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(19, 121);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(347, 148);
-            this.listBox1.TabIndex = 1;
+            this.lbxListaBolesti.FormattingEnabled = true;
+            this.lbxListaBolesti.ItemHeight = 16;
+            this.lbxListaBolesti.Location = new System.Drawing.Point(19, 121);
+            this.lbxListaBolesti.Name = "lbxListaBolesti";
+            this.lbxListaBolesti.Size = new System.Drawing.Size(347, 148);
+            this.lbxListaBolesti.TabIndex = 1;
+            this.lbxListaBolesti.SelectedIndexChanged += new System.EventHandler(this.lbxListaBolesti_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -100,14 +101,14 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Preporučeni proizvodi:";
             // 
-            // listBox2
+            // lbxPreporuceniProizvodi
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(19, 307);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(347, 116);
-            this.listBox2.TabIndex = 4;
+            this.lbxPreporuceniProizvodi.FormattingEnabled = true;
+            this.lbxPreporuceniProizvodi.ItemHeight = 16;
+            this.lbxPreporuceniProizvodi.Location = new System.Drawing.Point(19, 307);
+            this.lbxPreporuceniProizvodi.Name = "lbxPreporuceniProizvodi";
+            this.lbxPreporuceniProizvodi.Size = new System.Drawing.Size(347, 116);
+            this.lbxPreporuceniProizvodi.TabIndex = 4;
             // 
             // groupBox1
             // 
@@ -318,13 +319,14 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.lbxPreporuceniProizvodi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbxListaBolesti);
             this.Controls.Add(this.label1);
             this.Name = "Form3";
             this.Text = "Najčešće bolesti";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -338,10 +340,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxListaBolesti;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox lbxPreporuceniProizvodi;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

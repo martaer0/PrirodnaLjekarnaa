@@ -61,7 +61,7 @@ namespace PrirodnaLjekarnaa
         ListaKorisnika listakorisnika = new ListaKorisnika();
 
 
-        string FilePath = "KorisniciLjekarne.txt";
+        
 
         private void buttonPrijaviSe_Click(object sender, EventArgs e)
         {
@@ -110,7 +110,7 @@ namespace PrirodnaLjekarnaa
             string linijaIme = tbIme.Text;
             string linijaPrezime = tbPrezime.Text;
 
-            StreamWriter sw = new StreamWriter(FilePath, true);
+            StreamWriter sw = new StreamWriter(Admin.FilePath, true);
             if (linijaIme != "" && linijaPrezime != "")
             {
                 sw.WriteLine("{0}|{1}", linijaIme, linijaPrezime);
