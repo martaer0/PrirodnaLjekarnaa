@@ -94,7 +94,8 @@ namespace PrirodnaLjekarnaa
         //za direkt na kupovinu 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            // string linija 4 = korisnik.ime 
+            //
             string linija1 = textBox2.Text;
             string linija2 = textBox3.Text;
             string linija3 = textBox4.Text;
