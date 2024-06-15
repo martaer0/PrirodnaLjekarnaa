@@ -1,6 +1,6 @@
 ﻿namespace PrirodnaLjekarnaa
 {
-    partial class Form3
+    partial class PitajDoktora
     {
         /// <summary>
         /// Required designer variable.

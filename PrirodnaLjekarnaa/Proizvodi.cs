@@ -12,13 +12,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PrirodnaLjekarnaa
 {
-    public partial class Form1 : Form
+    public partial class Proizvodi : Form
     {
         List<string> stringList = new List<string>();
         //filepath na onoj odvojenoj
         string path = "ucenici.txt";
 
-        public Form1()
+        public Proizvodi()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace PrirodnaLjekarnaa
 {
-    partial class Form1
+    partial class Proizvodi
     {
         /// <summary>
         /// Required designer variable.

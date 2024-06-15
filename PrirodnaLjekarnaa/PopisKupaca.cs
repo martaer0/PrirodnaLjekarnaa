@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace PrirodnaLjekarnaa
 {
-    public partial class Form3 : Form
+    public partial class PopisKupaca : Form
     {
-        public Form3()
+        public PopisKupaca()
         {
             InitializeComponent();
         }
+
+      
     }
 }
