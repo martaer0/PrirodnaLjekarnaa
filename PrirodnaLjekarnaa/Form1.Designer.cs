@@ -51,9 +51,15 @@
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.kremeMasti = new System.Windows.Forms.RadioButton();
+            this.etericnaUlja = new System.Windows.Forms.RadioButton();
+            this.sokoviSirupi = new System.Windows.Forms.RadioButton();
+            this.cajevi = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -147,6 +153,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(187, 248);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            
             // 
             // menuStrip1
             // 
@@ -159,7 +166,7 @@
             this.oNamaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -233,7 +240,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 44);
+            this.textBox1.Location = new System.Drawing.Point(338, 383);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(230, 30);
@@ -244,16 +251,79 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(27, 86);
+            this.listBox1.Location = new System.Drawing.Point(27, 137);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(230, 308);
+            this.listBox1.Size = new System.Drawing.Size(275, 276);
             this.listBox1.TabIndex = 7;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.kremeMasti);
+            this.groupBox1.Controls.Add(this.etericnaUlja);
+            this.groupBox1.Controls.Add(this.sokoviSirupi);
+            this.groupBox1.Controls.Add(this.cajevi);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox1.Location = new System.Drawing.Point(27, 41);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(275, 85);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Klasifikacija:";
+            // 
+            // kremeMasti
+            // 
+            this.kremeMasti.AutoSize = true;
+            this.kremeMasti.Location = new System.Drawing.Point(135, 55);
+            this.kremeMasti.Name = "kremeMasti";
+            this.kremeMasti.Size = new System.Drawing.Size(134, 24);
+            this.kremeMasti.TabIndex = 3;
+            this.kremeMasti.TabStop = true;
+            this.kremeMasti.Text = "Kreme i masti";
+            this.kremeMasti.UseVisualStyleBackColor = true;
+            this.kremeMasti.CheckedChanged += new System.EventHandler(this.kremeMasti_CheckedChanged);
+            // 
+            // etericnaUlja
+            // 
+            this.etericnaUlja.AutoSize = true;
+            this.etericnaUlja.Location = new System.Drawing.Point(6, 55);
+            this.etericnaUlja.Name = "etericnaUlja";
+            this.etericnaUlja.Size = new System.Drawing.Size(128, 24);
+            this.etericnaUlja.TabIndex = 2;
+            this.etericnaUlja.TabStop = true;
+            this.etericnaUlja.Text = "Eterična ulja ";
+            this.etericnaUlja.UseVisualStyleBackColor = true;
+            this.etericnaUlja.CheckedChanged += new System.EventHandler(this.etericnaUlja_CheckedChanged);
+            // 
+            // sokoviSirupi
+            // 
+            this.sokoviSirupi.AutoSize = true;
+            this.sokoviSirupi.Location = new System.Drawing.Point(135, 26);
+            this.sokoviSirupi.Name = "sokoviSirupi";
+            this.sokoviSirupi.Size = new System.Drawing.Size(134, 24);
+            this.sokoviSirupi.TabIndex = 1;
+            this.sokoviSirupi.TabStop = true;
+            this.sokoviSirupi.Text = "Sokovi i sirupi";
+            this.sokoviSirupi.UseVisualStyleBackColor = true;
+            this.sokoviSirupi.CheckedChanged += new System.EventHandler(this.sokoviSirupi_CheckedChanged);
+            // 
+            // cajevi
+            // 
+            this.cajevi.AutoSize = true;
+            this.cajevi.Location = new System.Drawing.Point(6, 26);
+            this.cajevi.Name = "cajevi";
+            this.cajevi.Size = new System.Drawing.Size(76, 24);
+            this.cajevi.TabIndex = 0;
+            this.cajevi.TabStop = true;
+            this.cajevi.Text = "Čajevi";
+            this.cajevi.UseVisualStyleBackColor = true;
+            this.cajevi.CheckedChanged += new System.EventHandler(this.cajevi_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
@@ -265,6 +335,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,6 +367,11 @@
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton kremeMasti;
+        private System.Windows.Forms.RadioButton etericnaUlja;
+        private System.Windows.Forms.RadioButton sokoviSirupi;
+        private System.Windows.Forms.RadioButton cajevi;
     }
 }
 
