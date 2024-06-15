@@ -94,6 +94,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Dodaj u košaricu";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -103,6 +104,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Kupi";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -153,7 +155,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(187, 248);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            
             // 
             // menuStrip1
             // 
