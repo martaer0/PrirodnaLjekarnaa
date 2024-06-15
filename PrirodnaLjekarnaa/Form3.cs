@@ -18,22 +18,6 @@ namespace PrirodnaLjekarnaa
             InitializeComponent();
         }
 
-        List<string> ListaBolesti = new List<string>();
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            StreamReader sr = new StreamReader("..\\..\\Bolesti.txt");
-            string line = sr.ReadLine();
-
-            while (line != null)
-            {
-                ListaBolesti.Add(line);
-                line = sr.ReadLine();
-            }
-
-            lbxListaBolesti.DataSource = ListaBolesti;
-            sr.Close();
-        }
-
         private void lbxListaBolesti_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -84,6 +68,11 @@ namespace PrirodnaLjekarnaa
                 lbxPreporuceniProizvodi.DataSource = LjekoviZgaravica;
                 sr.Close();
             }
+        }
+
+        private void lbxPreporuceniProizvodi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            gbOdabraniProizvod.Visible = true;
         }
     }
 }

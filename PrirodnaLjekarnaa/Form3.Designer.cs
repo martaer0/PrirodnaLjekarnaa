@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbxPreporuceniProizvodi = new System.Windows.Forms.ListBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbOdabraniProizvod = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1.SuspendLayout();
+            this.gbOdabraniProizvod.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +75,10 @@
             // 
             this.lbxListaBolesti.FormattingEnabled = true;
             this.lbxListaBolesti.ItemHeight = 16;
+            this.lbxListaBolesti.Items.AddRange(new object[] {
+            "Glavobolja",
+            "Mučnina",
+            "Žgaravica"});
             this.lbxListaBolesti.Location = new System.Drawing.Point(19, 121);
             this.lbxListaBolesti.Name = "lbxListaBolesti";
             this.lbxListaBolesti.Size = new System.Drawing.Size(347, 148);
@@ -109,21 +113,23 @@
             this.lbxPreporuceniProizvodi.Name = "lbxPreporuceniProizvodi";
             this.lbxPreporuceniProizvodi.Size = new System.Drawing.Size(347, 116);
             this.lbxPreporuceniProizvodi.TabIndex = 4;
+            this.lbxPreporuceniProizvodi.SelectedIndexChanged += new System.EventHandler(this.lbxPreporuceniProizvodi_SelectedIndexChanged);
             // 
-            // groupBox1
+            // gbOdabraniProizvod
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(396, 89);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 300);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
+            this.gbOdabraniProizvod.Controls.Add(this.textBox3);
+            this.gbOdabraniProizvod.Controls.Add(this.textBox2);
+            this.gbOdabraniProizvod.Controls.Add(this.textBox1);
+            this.gbOdabraniProizvod.Controls.Add(this.label7);
+            this.gbOdabraniProizvod.Controls.Add(this.label6);
+            this.gbOdabraniProizvod.Controls.Add(this.label5);
+            this.gbOdabraniProizvod.Controls.Add(this.pictureBox1);
+            this.gbOdabraniProizvod.Location = new System.Drawing.Point(396, 89);
+            this.gbOdabraniProizvod.Name = "gbOdabraniProizvod";
+            this.gbOdabraniProizvod.Size = new System.Drawing.Size(378, 300);
+            this.gbOdabraniProizvod.TabIndex = 5;
+            this.gbOdabraniProizvod.TabStop = false;
+            this.gbOdabraniProizvod.Visible = false;
             // 
             // textBox3
             // 
@@ -207,9 +213,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.button1.Location = new System.Drawing.Point(540, 395);
+            this.button1.Location = new System.Drawing.Point(520, 395);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 33);
+            this.button1.Size = new System.Drawing.Size(173, 33);
             this.button1.TabIndex = 8;
             this.button1.Text = "Dodaj u košaricu";
             this.button1.UseVisualStyleBackColor = true;
@@ -245,7 +251,7 @@
             this.naslovnicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ispisKorisnikaToolStripMenuItem});
             this.naslovnicaToolStripMenuItem.Name = "naslovnicaToolStripMenuItem";
-            this.naslovnicaToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
+            this.naslovnicaToolStripMenuItem.Size = new System.Drawing.Size(95, 26);
             this.naslovnicaToolStripMenuItem.Text = "Naslovnica";
             // 
             // ispisKorisnikaToolStripMenuItem
@@ -261,7 +267,7 @@
             this.kupiToolStripMenuItem,
             this.dodajNovoToolStripMenuItem});
             this.proizvodiToolStripMenuItem.Name = "proizvodiToolStripMenuItem";
-            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
             this.proizvodiToolStripMenuItem.Text = "Proizvodi";
             // 
             // košaricaToolStripMenuItem
@@ -287,7 +293,7 @@
             this.doktorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.najčešćeBolestiToolStripMenuItem});
             this.doktorToolStripMenuItem.Name = "doktorToolStripMenuItem";
-            this.doktorToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.doktorToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
             this.doktorToolStripMenuItem.Text = "Doktor";
             // 
             // najčešćeBolestiToolStripMenuItem
@@ -299,13 +305,13 @@
             // pomoćToolStripMenuItem
             // 
             this.pomoćToolStripMenuItem.Name = "pomoćToolStripMenuItem";
-            this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
             this.pomoćToolStripMenuItem.Text = "Pomoć";
             // 
             // oNamaToolStripMenuItem
             // 
             this.oNamaToolStripMenuItem.Name = "oNamaToolStripMenuItem";
-            this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
             this.oNamaToolStripMenuItem.Text = "O nama";
             // 
             // Form3
@@ -318,7 +324,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbOdabraniProizvod);
             this.Controls.Add(this.lbxPreporuceniProizvodi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -326,9 +332,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Form3";
             this.Text = "Najčešće bolesti";
-            this.Load += new System.EventHandler(this.Form3_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbOdabraniProizvod.ResumeLayout(false);
+            this.gbOdabraniProizvod.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -344,7 +349,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox lbxPreporuceniProizvodi;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbOdabraniProizvod;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

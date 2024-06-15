@@ -30,10 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxRacun = new System.Windows.Forms.ListBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPotvrdi = new System.Windows.Forms.Button();
+            this.btnOtkaziPosiljku = new System.Windows.Forms.Button();
+            this.btnUcitajRacun = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -50,56 +51,69 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label2.Location = new System.Drawing.Point(392, 49);
+            this.label2.Location = new System.Drawing.Point(392, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Dolazak pošiljke:";
             // 
-            // listBox1
+            // lbxRacun
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(52, 49);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(292, 372);
-            this.listBox1.TabIndex = 2;
+            this.lbxRacun.FormattingEnabled = true;
+            this.lbxRacun.ItemHeight = 16;
+            this.lbxRacun.Location = new System.Drawing.Point(52, 49);
+            this.lbxRacun.Name = "lbxRacun";
+            this.lbxRacun.Size = new System.Drawing.Size(292, 372);
+            this.lbxRacun.TabIndex = 2;
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(397, 91);
+            this.monthCalendar1.Location = new System.Drawing.Point(397, 140);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 3;
             // 
-            // button1
+            // btnPotvrdi
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.button1.Location = new System.Drawing.Point(397, 371);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 40);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Potvrdi";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPotvrdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnPotvrdi.Location = new System.Drawing.Point(397, 371);
+            this.btnPotvrdi.Name = "btnPotvrdi";
+            this.btnPotvrdi.Size = new System.Drawing.Size(98, 40);
+            this.btnPotvrdi.TabIndex = 4;
+            this.btnPotvrdi.Text = "Potvrdi";
+            this.btnPotvrdi.UseVisualStyleBackColor = true;
+            this.btnPotvrdi.Click += new System.EventHandler(this.btnPotvrdi_Click);
             // 
-            // button2
+            // btnOtkaziPosiljku
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.button2.Location = new System.Drawing.Point(516, 371);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 40);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Otkaži pošiljku";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnOtkaziPosiljku.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnOtkaziPosiljku.Location = new System.Drawing.Point(516, 371);
+            this.btnOtkaziPosiljku.Name = "btnOtkaziPosiljku";
+            this.btnOtkaziPosiljku.Size = new System.Drawing.Size(115, 40);
+            this.btnOtkaziPosiljku.TabIndex = 5;
+            this.btnOtkaziPosiljku.Text = "Otkaži pošiljku";
+            this.btnOtkaziPosiljku.UseVisualStyleBackColor = true;
+            // 
+            // btnUcitajRacun
+            // 
+            this.btnUcitajRacun.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnUcitajRacun.Location = new System.Drawing.Point(397, 49);
+            this.btnUcitajRacun.Name = "btnUcitajRacun";
+            this.btnUcitajRacun.Size = new System.Drawing.Size(123, 44);
+            this.btnUcitajRacun.TabIndex = 6;
+            this.btnUcitajRacun.Text = "Učitaj račun";
+            this.btnUcitajRacun.UseVisualStyleBackColor = true;
+            this.btnUcitajRacun.Click += new System.EventHandler(this.btnUcitajRacun_Click);
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUcitajRacun);
+            this.Controls.Add(this.btnOtkaziPosiljku);
+            this.Controls.Add(this.btnPotvrdi);
             this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbxRacun);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form4";
@@ -113,9 +127,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxRacun;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPotvrdi;
+        private System.Windows.Forms.Button btnOtkaziPosiljku;
+        private System.Windows.Forms.Button btnUcitajRacun;
     }
 }
