@@ -26,7 +26,7 @@ namespace PrirodnaLjekarnaa
 
         private void cajevi_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("cajevi.txt");
+            StreamReader sr = new StreamReader("Cajevi.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -40,7 +40,7 @@ namespace PrirodnaLjekarnaa
 
         private void sokoviSirupi_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("sokoviSirupi.txt");
+            StreamReader sr = new StreamReader("SokoviiSirupi.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -54,7 +54,7 @@ namespace PrirodnaLjekarnaa
 
         private void etericnaUlja_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("etericnaUlja.txt");
+            StreamReader sr = new StreamReader("EtericnaUlja.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -68,7 +68,7 @@ namespace PrirodnaLjekarnaa
 
         private void kremeMasti_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("kremeMasti.txt");
+            StreamReader sr = new StreamReader("KremeiMasti.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -150,7 +150,7 @@ namespace PrirodnaLjekarnaa
 
             else
             {
-                MessageBox.Show("U košarici više nema mjesta! Idite u košaricu!");
+                MessageBox.Show("U košarici više nema mjesta! Idite na košaricu!");
             }
 
 
