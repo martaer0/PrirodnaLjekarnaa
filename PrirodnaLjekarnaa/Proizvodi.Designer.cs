@@ -55,6 +55,9 @@
             this.etericnaUlja = new System.Windows.Forms.RadioButton();
             this.sokoviSirupi = new System.Windows.Forms.RadioButton();
             this.cajevi = new System.Windows.Forms.RadioButton();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -63,6 +66,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -74,7 +80,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(338, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 344);
+            this.panel1.Size = new System.Drawing.Size(450, 372);
             this.panel1.TabIndex = 4;
             // 
             // label2
@@ -87,9 +93,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(186, 296);
+            this.button2.Location = new System.Drawing.Point(313, 267);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 30);
+            this.button2.Size = new System.Drawing.Size(112, 47);
             this.button2.TabIndex = 8;
             this.button2.Text = "Dodaj u košaricu";
             this.button2.UseVisualStyleBackColor = true;
@@ -97,9 +103,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(325, 296);
+            this.button1.Location = new System.Drawing.Point(313, 320);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 30);
+            this.button1.Size = new System.Drawing.Size(112, 35);
             this.button1.TabIndex = 7;
             this.button1.Text = "Kupi";
             this.button1.UseVisualStyleBackColor = true;
@@ -128,7 +134,7 @@
             this.textBox4.Location = new System.Drawing.Point(274, 107);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(151, 144);
+            this.textBox4.Size = new System.Drawing.Size(151, 93);
             this.textBox4.TabIndex = 3;
             // 
             // textBox3
@@ -309,6 +315,33 @@
             this.cajevi.UseVisualStyleBackColor = true;
             this.cajevi.CheckedChanged += new System.EventHandler(this.cajevi_CheckedChanged);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(199, 267);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(112, 47);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Idi u košaricu!";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(196, 208);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Cijena:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(274, 208);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(151, 29);
+            this.textBox1.TabIndex = 12;
+            // 
             // Proizvodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -361,6 +394,9 @@
         private System.Windows.Forms.RadioButton etericnaUlja;
         private System.Windows.Forms.RadioButton sokoviSirupi;
         private System.Windows.Forms.RadioButton cajevi;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
 
