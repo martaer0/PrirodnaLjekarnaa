@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kupovina));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -678,10 +679,11 @@
             this.maskedTextBox1.Size = new System.Drawing.Size(183, 22);
             this.maskedTextBox1.TabIndex = 26;
             // 
-            // Form2
+            // Kupovina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.textBox9);
@@ -697,7 +699,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox2);
-            this.Name = "Form2";
+            this.Name = "Kupovina";
             this.Text = "Form2";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

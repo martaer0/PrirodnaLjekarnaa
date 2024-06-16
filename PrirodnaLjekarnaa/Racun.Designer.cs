@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Racun));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbxRacun = new System.Windows.Forms.ListBox();
@@ -104,10 +105,11 @@
             this.btnUcitajRacun.UseVisualStyleBackColor = true;
             this.btnUcitajRacun.Click += new System.EventHandler(this.btnUcitajRacun_Click);
             // 
-            // Form4
+            // Racun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnUcitajRacun);
             this.Controls.Add(this.btnOtkaziPosiljku);
@@ -116,7 +118,7 @@
             this.Controls.Add(this.lbxRacun);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form4";
+            this.Name = "Racun";
             this.Text = "Račun";
             this.ResumeLayout(false);
             this.PerformLayout();

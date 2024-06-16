@@ -54,6 +54,18 @@ namespace PrirodnaLjekarnaa
             
         }
 
+        private void ispisKorisnikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PopisKupaca frmDodaj = new PopisKupaca();
+            frmDodaj.ShowDialog();
+        }
+
+        private void kupiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kupovina frmDodaj = new Kupovina();
+            frmDodaj.ShowDialog();
+        }
+
 
         //Dio za prijavu i registraciju:
 
@@ -130,5 +142,6 @@ namespace PrirodnaLjekarnaa
 
             sw.Close();
         }
+
     }
 }

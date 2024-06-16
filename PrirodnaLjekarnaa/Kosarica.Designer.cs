@@ -248,10 +248,11 @@
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.oNamaToolStripMenuItem.Text = "O nama";
             // 
-            // Form2
+            // Kosarica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label4);
@@ -259,7 +260,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form2";
+            this.Name = "Kosarica";
             this.Text = "Košarica";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

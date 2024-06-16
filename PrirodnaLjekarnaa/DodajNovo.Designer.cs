@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodajNovo));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -56,9 +58,11 @@
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +77,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(29, 68);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 68);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(258, 241);
@@ -98,11 +102,11 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 73);
+            this.groupBox1.Location = new System.Drawing.Point(26, 73);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(776, 366);
+            this.groupBox1.Size = new System.Drawing.Size(723, 366);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -142,7 +146,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button3.Location = new System.Drawing.Point(29, 315);
+            this.button3.Location = new System.Drawing.Point(17, 315);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(170, 35);
@@ -166,7 +170,7 @@
             // btnDodajproizvod
             // 
             this.btnDodajproizvod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnDodajproizvod.Location = new System.Drawing.Point(673, 256);
+            this.btnDodajproizvod.Location = new System.Drawing.Point(624, 265);
             this.btnDodajproizvod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDodajproizvod.Name = "btnDodajproizvod";
             this.btnDodajproizvod.Size = new System.Drawing.Size(87, 34);
@@ -178,7 +182,7 @@
             // btnOdustani
             // 
             this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnOdustani.Location = new System.Drawing.Point(673, 303);
+            this.btnOdustani.Location = new System.Drawing.Point(624, 303);
             this.btnOdustani.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(87, 34);
@@ -201,7 +205,7 @@
             // 
             // tbOpis
             // 
-            this.tbOpis.Location = new System.Drawing.Point(314, 233);
+            this.tbOpis.Location = new System.Drawing.Point(298, 233);
             this.tbOpis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbOpis.Multiline = true;
             this.tbOpis.Name = "tbOpis";
@@ -210,7 +214,7 @@
             // 
             // tbLjekovitaSvojstva
             // 
-            this.tbLjekovitaSvojstva.Location = new System.Drawing.Point(314, 124);
+            this.tbLjekovitaSvojstva.Location = new System.Drawing.Point(298, 124);
             this.tbLjekovitaSvojstva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLjekovitaSvojstva.Multiline = true;
             this.tbLjekovitaSvojstva.Name = "tbLjekovitaSvojstva";
@@ -219,7 +223,7 @@
             // 
             // tbimeProizvoda
             // 
-            this.tbimeProizvoda.Location = new System.Drawing.Point(365, 64);
+            this.tbimeProizvoda.Location = new System.Drawing.Point(338, 64);
             this.tbimeProizvoda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbimeProizvoda.Name = "tbimeProizvoda";
             this.tbimeProizvoda.Size = new System.Drawing.Size(163, 22);
@@ -229,7 +233,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(309, 97);
+            this.label5.Location = new System.Drawing.Point(293, 97);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(171, 25);
             this.label5.TabIndex = 5;
@@ -239,7 +243,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(309, 202);
+            this.label4.Location = new System.Drawing.Point(293, 206);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 25);
             this.label4.TabIndex = 4;
@@ -249,7 +253,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(309, 60);
+            this.label3.Location = new System.Drawing.Point(293, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 25);
             this.label3.TabIndex = 3;
@@ -340,22 +344,24 @@
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.oNamaToolStripMenuItem.Text = "O nama";
             // 
-            // Form5
+            // DodajNovo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form5";
+            this.Name = "DodajNovo";
             this.Text = "Dodaj novo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,5 +397,6 @@
         private System.Windows.Forms.RadioButton rbCajevi;
         private System.Windows.Forms.RadioButton rbEtericnaUlja;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

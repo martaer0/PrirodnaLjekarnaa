@@ -83,8 +83,9 @@
             // ispisKorisnikaToolStripMenuItem
             // 
             this.ispisKorisnikaToolStripMenuItem.Name = "ispisKorisnikaToolStripMenuItem";
-            this.ispisKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.ispisKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ispisKorisnikaToolStripMenuItem.Text = "Ispis korisnika";
+            this.ispisKorisnikaToolStripMenuItem.Click += new System.EventHandler(this.ispisKorisnikaToolStripMenuItem_Click);
             // 
             // proizvodiToolStripMenuItem
             // 
@@ -107,8 +108,9 @@
             // kupiToolStripMenuItem
             // 
             this.kupiToolStripMenuItem.Name = "kupiToolStripMenuItem";
-            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.kupiToolStripMenuItem.Text = "Kupi";
+            this.kupiToolStripMenuItem.Click += new System.EventHandler(this.kupiToolStripMenuItem_Click);
             // 
             // dodajNovoToolStripMenuItem
             // 
@@ -243,7 +245,7 @@
             this.buttonPrijava.UseVisualStyleBackColor = true;
             this.buttonPrijava.Click += new System.EventHandler(this.buttonPrijava_Click);
             // 
-            // Form1
+            // NaslovnaStranicaPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,7 +258,7 @@
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form1";
+            this.Name = "NaslovnaStranicaPL";
             this.Text = "Naslovnica";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
