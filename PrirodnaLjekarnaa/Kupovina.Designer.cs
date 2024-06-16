@@ -79,7 +79,6 @@
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -585,14 +584,6 @@
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.oNamaToolStripMenuItem.Text = "O nama ";
             // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(12, 344);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(212, 43);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "neki opis nes bezveze ka kad ce shippat bla bla idk";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -731,7 +722,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox2);
             this.Name = "Kupovina";
@@ -798,7 +788,6 @@
         private System.Windows.Forms.ToolStripMenuItem najčešćeBolestiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

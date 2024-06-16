@@ -211,6 +211,7 @@ namespace PrirodnaLjekarnaa
                 File.WriteAllText(Admin.FilePath5, "");
             }
 
+
             if (Kosarica.Checked == true)
             {
                 BrisanjeLinije(textBox11, maskedTextBox16, maskedTextBox6, maskedTextBox11);
@@ -221,6 +222,8 @@ namespace PrirodnaLjekarnaa
                 BrisanjeLinije(textBox7, maskedTextBox17, maskedTextBox21, maskedTextBox25);
                 BrisanjeLinije(textBox8, maskedTextBox18, maskedTextBox22, maskedTextBox26);
             }
+
+            else MessageBox.Show("Niste označili način kupnje.");
 
         }
 
@@ -233,9 +236,21 @@ namespace PrirodnaLjekarnaa
         }
 
 
-        //konacno - zavrsetak (vidicu jos)
+        //konacno - zavrsetak
         private void button4_Click(object sender, EventArgs e)
         {
+            if ((textBox11.Text != "" || textBox2.Text != "" || textBox3.Text != "" || textBox4.Text != "" || textBox5.Text != "" || textBox7.Text != "" || textBox8.Text != "") && textBox1.Text != "" && maskedTextBox1.Text != "")
+            {
+                string dolazak = DateTime.Now.ToString();
+                MessageBox.Show("Vaša kupnja je gotova. Očekivani dolazak pošiljke je {0}", dolazak);
+
+                //File.WriteAllText(Admin.FilePath6, "");
+
+                Proizvodi odvestProizvodi = new Proizvodi();
+                odvestProizvodi.ShowDialog();
+            }
+
+            else MessageBox.Show("Nisu svi podaci uneseni. Pokušajte ponovno.");
 
         }
     }
