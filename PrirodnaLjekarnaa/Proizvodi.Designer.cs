@@ -49,7 +49,6 @@
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.kremeMasti = new System.Windows.Forms.RadioButton();
@@ -239,15 +238,6 @@
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.oNamaToolStripMenuItem.Text = "O nama ";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(338, 383);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 30);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "Search nekakvi";
-            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
@@ -319,17 +309,16 @@
             this.cajevi.UseVisualStyleBackColor = true;
             this.cajevi.CheckedChanged += new System.EventHandler(this.cajevi_CheckedChanged);
             // 
-            // Form1
+            // Proizvodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "Proizvodi";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -366,7 +355,6 @@
         private System.Windows.Forms.ToolStripMenuItem najčešćeBolestiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton kremeMasti;
