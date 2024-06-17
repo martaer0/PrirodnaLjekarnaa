@@ -19,46 +19,48 @@ namespace PrirodnaLjekarnaa
             InitializeComponent();
         }
         //povezivanje formi na MenuStrip
-        private void ispisKorisnikaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PopisKupaca frmDodaj = new PopisKupaca();
-            frmDodaj.ShowDialog();
-        }
+        
 
         private void dodajNovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DodajNovo frmDodaj = new DodajNovo();
             frmDodaj.ShowDialog();  
+            this.Close();
         }
 
         private void proizvodiToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Proizvodi frmDodaj = new Proizvodi();
             frmDodaj.ShowDialog();
+            this.Close();
         }
 
         private void kupiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Kupovina frmDodaj = new Kupovina();
             frmDodaj.ShowDialog();
+            this.Close();
         }
 
         private void najčešćeBolestiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NajcesceBolesti frmDodaj = new NajcesceBolesti();
             frmDodaj.ShowDialog();
+            this.Close();
         }
 
         private void oNamaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Onama frmDodaj = new Onama();
+            Onama2 frmDodaj = new Onama2();
             frmDodaj.ShowDialog();
+            this.Close();
         }
 
         private void košaricaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Kosarica frmDodaj = new Kosarica();
             frmDodaj.ShowDialog();
+            this.Close();
         }
 
         private void buttonPrijava_Click(object sender, EventArgs e)
@@ -106,7 +108,11 @@ namespace PrirodnaLjekarnaa
                     gbPrijava.Visible = false;
                     menuStrip1.Enabled = true;
                     buttonPrijava.Enabled = false;
+
+                    //Proizvodi frmDodaj = new Proizvodi();
+                    //frmDodaj.ShowDialog();
                     
+
                 }
 
                 else
@@ -132,6 +138,9 @@ namespace PrirodnaLjekarnaa
                 gbPrijava.Visible = false;
                 menuStrip1.Enabled = true;
                 buttonPrijava.Enabled = false;
+
+                //Proizvodi frmDodaj = new Proizvodi();
+                //frmDodaj.ShowDialog();
 
             }
 

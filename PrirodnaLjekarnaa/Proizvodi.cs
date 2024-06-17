@@ -15,10 +15,8 @@ namespace PrirodnaLjekarnaa
 {
     public partial class Proizvodi : Form
     {
-        List<string> stringList = new List<string>();
-        //filepath na onoj odvojenoj
-        
 
+        int n = 0;
         public Proizvodi()
         {
             InitializeComponent();
@@ -26,7 +24,8 @@ namespace PrirodnaLjekarnaa
 
         private void cajevi_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("Cajevi.txt");
+            List<string> stringList = new List<string>();
+            StreamReader sr = new StreamReader("..\\..\\Cajevi.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -40,7 +39,8 @@ namespace PrirodnaLjekarnaa
 
         private void sokoviSirupi_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("SokoviiSirupi.txt");
+            List<string> stringList = new List<string>();
+            StreamReader sr = new StreamReader("..\\..\\SokoviiSirupi.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -54,7 +54,8 @@ namespace PrirodnaLjekarnaa
 
         private void etericnaUlja_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("EtericnaUlja.txt");
+            List<string> stringList = new List<string>();
+            StreamReader sr = new StreamReader("..\\..\\EtericnaUlja.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -68,7 +69,8 @@ namespace PrirodnaLjekarnaa
 
         private void kremeMasti_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("KremeiMasti.txt");
+            List<string> stringList = new List<string>();
+            StreamReader sr = new StreamReader("..\\..\\KremeiMasti.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -89,7 +91,27 @@ namespace PrirodnaLjekarnaa
             textBox4.Text = linija[2];
             textBox1.Text = linija[3];
 
-            // izvest to sa slikama nemam blage veze kako 
+            // slike
+
+            if(cajevi.Checked == true)
+            {
+                pictureBox1.Load("..\\..\\slike\\cajevi.jpg");
+            }
+
+            if (etericnaUlja.Checked == true)
+            {
+                pictureBox1.Load("..\\..\\slike\\etericnaUlja.jpg");
+            }
+
+            if (sokoviSirupi.Checked == true)
+            {
+                pictureBox1.Load("..\\..\\slike\\sokoviSirupi.jpg");
+            }
+
+            if (kremeMasti.Checked == true)
+            {
+                pictureBox1.Load("..\\..\\slike\\kremeMasti.jpg");
+            }
 
         }
 
@@ -123,7 +145,7 @@ namespace PrirodnaLjekarnaa
             string linija2 = textBox3.Text;
             string linija3 = textBox4.Text;
             string linija4 = textBox1.Text;
-            int n = 0;
+            
 
             if (n < 7)
             {
@@ -150,7 +172,7 @@ namespace PrirodnaLjekarnaa
 
             else
             {
-                MessageBox.Show("U košarici više nema mjesta! Idite na košaricu!");
+                MessageBox.Show("U košarici više nema mjesta! Idite u košaricu!");
             }
 
 
@@ -161,6 +183,52 @@ namespace PrirodnaLjekarnaa
         {
             Kosarica odvestKosarica = new Kosarica();
             odvestKosarica.ShowDialog();
+            this.Close();
+        }
+
+
+
+
+        private void naslovnicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NaslovnaStranicaPL odvestKosarica = new NaslovnaStranicaPL();
+            odvestKosarica.ShowDialog();
+            this.Close();
+        }        
+
+        private void košaricaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kosarica odvestKosarica = new Kosarica();
+            odvestKosarica.ShowDialog();
+            this.Close();
+        }
+
+        private void kupiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kupovina odvestKosarica = new Kupovina();
+            odvestKosarica.ShowDialog();
+            this.Close();
+        }
+
+        private void dodajNovoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DodajNovo odvestKosarica = new DodajNovo();
+            odvestKosarica.ShowDialog();
+            this.Close();
+        }
+
+        private void najčešćeBolestiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NajcesceBolesti odvestKosarica = new NajcesceBolesti();
+            odvestKosarica.ShowDialog();
+            this.Close();
+        }
+
+        private void oNamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Onama2 odvestKosarica = new Onama2();
+            odvestKosarica.ShowDialog();
+            this.Close();
         }
     }
 }
