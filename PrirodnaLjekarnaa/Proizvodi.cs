@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,7 @@ namespace PrirodnaLjekarnaa
     {
         List<string> stringList = new List<string>();
         //filepath na onoj odvojenoj
-        string path = "ucenici.txt";
+        
 
         public Proizvodi()
         {
@@ -25,7 +26,7 @@ namespace PrirodnaLjekarnaa
 
         private void cajevi_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("cajevi.txt");
+            StreamReader sr = new StreamReader("Cajevi.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -39,7 +40,7 @@ namespace PrirodnaLjekarnaa
 
         private void sokoviSirupi_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("sokoviSirupi.txt");
+            StreamReader sr = new StreamReader("SokoviiSirupi.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -53,7 +54,7 @@ namespace PrirodnaLjekarnaa
 
         private void etericnaUlja_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("etericnaUlja.txt");
+            StreamReader sr = new StreamReader("EtericnaUlja.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -67,7 +68,7 @@ namespace PrirodnaLjekarnaa
 
         private void kremeMasti_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("kremeMasti.txt");
+            StreamReader sr = new StreamReader("KremeiMasti.txt");
             string line = sr.ReadLine();
 
             while (line != null)
@@ -82,45 +83,84 @@ namespace PrirodnaLjekarnaa
 
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            string[] linija = listBox1.SelectedItem.ToString().Split(';');
+            string[] linija = listBox1.SelectedItem.ToString().Split('|');
             textBox2.Text = linija[0];
             textBox3.Text = linija[1];
             textBox4.Text = linija[2];
-            
+            textBox1.Text = linija[2];
+
             // izvest to sa slikama nemam blage veze kako 
 
         }
 
-        //za direkt na kupovinu 
+        //za direkt na kupovinu jedan proizvod
         private void button1_Click(object sender, EventArgs e)
-        {
-            // string linija 4 = korisnik.ime 
-            //
+        {            
             string linija1 = textBox2.Text;
-            string linija2 = textBox3.Text;
-            string linija3 = textBox4.Text;
-            
+            string linija2 = textBox1.Text;
 
-            StreamWriter sw = new StreamWriter(path, true);
+            StreamWriter sw = new StreamWriter(Admin.FilePath5, true);
             if (linija1 != "")
             {
-                sw.WriteLine("{0}|{1}|{2}|{3}", linija1, linija2, linija3);
+                sw.WriteLine("{0}|{1}", linija1, linija2);
                 textBox2.Text = "";
                 textBox3.Text = "";
                 textBox4.Text = "";
-
-                
+                textBox1.Text = "";
 
             }            
 
             sw.Close();
+
+
         }
 
+
+        //dodavanje u kosaricu do 7 proizvoda 
         private void button2_Click(object sender, EventArgs e)
         {
+            string linija1 = textBox2.Text;
+            string linija2 = textBox3.Text;
+            string linija3 = textBox4.Text;
+            string linija4 = textBox1.Text;
+            int n = 0;
+
+            if (n < 7)
+            {
+                StreamWriter sw = new StreamWriter(Admin.FilePath6, true);
+                if (linija1 != "")
+                {
+                    sw.WriteLine("{0}|{1}|{2}|{3}", linija1, linija2, linija3, linija4);
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox1.Text = "";
+
+
+                    MessageBox.Show("Proizvodi su spremljeni u košaricu!");
+                    n++;
+                }
+                else
+                {
+                    MessageBox.Show("Nema unesenih proizvoda!");
+                }
+
+                sw.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("U košarici više nema mjesta! Idite na košaricu!");
+            }
+
 
         }
 
-        
+        //odvest ce na kosaricu 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Kosarica odvestKosarica = new Kosarica();
+            odvestKosarica.ShowDialog();
+        }
     }
 }

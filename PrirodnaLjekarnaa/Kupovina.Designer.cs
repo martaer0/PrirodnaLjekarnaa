@@ -79,7 +79,6 @@
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -91,6 +90,8 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.JedanProizvod = new System.Windows.Forms.CheckBox();
+            this.Kosarica = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -136,7 +137,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(13, 57);
+            this.groupBox2.Location = new System.Drawing.Point(13, 72);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -154,6 +155,7 @@
             this.button10.TabIndex = 81;
             this.button10.Text = "Del";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button3
             // 
@@ -164,6 +166,7 @@
             this.button3.TabIndex = 80;
             this.button3.Text = "Del";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // maskedTextBox26
             // 
@@ -187,7 +190,7 @@
             // 
             this.maskedTextBox22.Location = new System.Drawing.Point(259, 235);
             this.maskedTextBox22.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox22.Mask = "0";
+            this.maskedTextBox22.Mask = "1";
             this.maskedTextBox22.Name = "maskedTextBox22";
             this.maskedTextBox22.Size = new System.Drawing.Size(65, 22);
             this.maskedTextBox22.TabIndex = 75;
@@ -196,7 +199,7 @@
             // 
             this.maskedTextBox21.Location = new System.Drawing.Point(259, 205);
             this.maskedTextBox21.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox21.Mask = "0";
+            this.maskedTextBox21.Mask = "1";
             this.maskedTextBox21.Name = "maskedTextBox21";
             this.maskedTextBox21.Size = new System.Drawing.Size(65, 22);
             this.maskedTextBox21.TabIndex = 74;
@@ -242,6 +245,7 @@
             this.button8.TabIndex = 65;
             this.button8.Text = "Del";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -252,6 +256,7 @@
             this.button7.TabIndex = 64;
             this.button7.Text = "Del";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -262,6 +267,7 @@
             this.button6.TabIndex = 63;
             this.button6.Text = "Del";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -272,6 +278,7 @@
             this.button5.TabIndex = 62;
             this.button5.Text = "Del";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // maskedTextBox15
             // 
@@ -322,7 +329,7 @@
             // 
             this.maskedTextBox10.Location = new System.Drawing.Point(259, 175);
             this.maskedTextBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox10.Mask = "0";
+            this.maskedTextBox10.Mask = "1";
             this.maskedTextBox10.Name = "maskedTextBox10";
             this.maskedTextBox10.Size = new System.Drawing.Size(65, 22);
             this.maskedTextBox10.TabIndex = 56;
@@ -331,7 +338,7 @@
             // 
             this.maskedTextBox9.Location = new System.Drawing.Point(259, 145);
             this.maskedTextBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox9.Mask = "0";
+            this.maskedTextBox9.Mask = "1";
             this.maskedTextBox9.Name = "maskedTextBox9";
             this.maskedTextBox9.Size = new System.Drawing.Size(65, 22);
             this.maskedTextBox9.TabIndex = 55;
@@ -340,7 +347,7 @@
             // 
             this.maskedTextBox8.Location = new System.Drawing.Point(259, 115);
             this.maskedTextBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox8.Mask = "0";
+            this.maskedTextBox8.Mask = "1";
             this.maskedTextBox8.Name = "maskedTextBox8";
             this.maskedTextBox8.Size = new System.Drawing.Size(65, 22);
             this.maskedTextBox8.TabIndex = 54;
@@ -349,7 +356,7 @@
             // 
             this.maskedTextBox7.Location = new System.Drawing.Point(259, 85);
             this.maskedTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox7.Mask = "0";
+            this.maskedTextBox7.Mask = "1";
             this.maskedTextBox7.Name = "maskedTextBox7";
             this.maskedTextBox7.Size = new System.Drawing.Size(65, 22);
             this.maskedTextBox7.TabIndex = 53;
@@ -358,7 +365,7 @@
             // 
             this.maskedTextBox6.Location = new System.Drawing.Point(259, 55);
             this.maskedTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox6.Mask = "0";
+            this.maskedTextBox6.Mask = "1";
             this.maskedTextBox6.Name = "maskedTextBox6";
             this.maskedTextBox6.Size = new System.Drawing.Size(65, 22);
             this.maskedTextBox6.TabIndex = 52;
@@ -422,6 +429,7 @@
             this.button9.TabIndex = 25;
             this.button9.Text = "Del";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // textBox5
             // 
@@ -576,14 +584,6 @@
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.oNamaToolStripMenuItem.Text = "O nama ";
             // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(12, 329);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(212, 43);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "neki opis nes bezveze ka kad ce shippat bla bla idk";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -621,12 +621,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(440, 332);
+            this.button1.Location = new System.Drawing.Point(440, 347);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 40);
             this.button1.TabIndex = 20;
             this.button1.Text = "Izbriši sve";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -636,6 +637,7 @@
             this.button2.TabIndex = 21;
             this.button2.Text = "Izlaz";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -645,6 +647,7 @@
             this.button4.TabIndex = 22;
             this.button4.Text = "Završi";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox1
             // 
@@ -661,6 +664,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(183, 24);
             this.textBox6.TabIndex = 24;
+            this.textBox6.Text = "14";
             // 
             // textBox9
             // 
@@ -678,11 +682,35 @@
             this.maskedTextBox1.Size = new System.Drawing.Size(183, 22);
             this.maskedTextBox1.TabIndex = 26;
             // 
-            // Form2
+            // JedanProizvod
+            // 
+            this.JedanProizvod.AutoSize = true;
+            this.JedanProizvod.Location = new System.Drawing.Point(13, 45);
+            this.JedanProizvod.Name = "JedanProizvod";
+            this.JedanProizvod.Size = new System.Drawing.Size(160, 20);
+            this.JedanProizvod.TabIndex = 27;
+            this.JedanProizvod.Text = "Samo jedan proizvod!";
+            this.JedanProizvod.UseVisualStyleBackColor = true;
+            this.JedanProizvod.CheckedChanged += new System.EventHandler(this.JedanProizvod_CheckedChanged);
+            // 
+            // Kosarica
+            // 
+            this.Kosarica.AutoSize = true;
+            this.Kosarica.Location = new System.Drawing.Point(179, 45);
+            this.Kosarica.Name = "Kosarica";
+            this.Kosarica.Size = new System.Drawing.Size(85, 20);
+            this.Kosarica.TabIndex = 28;
+            this.Kosarica.Text = "Košarica!";
+            this.Kosarica.UseVisualStyleBackColor = true;
+            this.Kosarica.CheckedChanged += new System.EventHandler(this.Kosarica_CheckedChanged);
+            // 
+            // Kupovina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Kosarica);
+            this.Controls.Add(this.JedanProizvod);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox6);
@@ -694,10 +722,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox2);
-            this.Name = "Form2";
+            this.Name = "Kupovina";
             this.Text = "Form2";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -761,7 +788,6 @@
         private System.Windows.Forms.ToolStripMenuItem najčešćeBolestiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -773,5 +799,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.CheckBox JedanProizvod;
+        private System.Windows.Forms.CheckBox Kosarica;
     }
 }
