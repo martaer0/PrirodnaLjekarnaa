@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PrirodnaLjekarnaa
 {
@@ -23,7 +24,7 @@ namespace PrirodnaLjekarnaa
 
             if (lbxListaBolesti.SelectedItem.ToString() == "Glavobolja")
             {
-                StreamReader sr = new StreamReader("..\\..\\LjekoviGlavobolja.txt");
+                StreamReader sr = new StreamReader(Admin.FilePath8);
                 string line = sr.ReadLine();
                 List<string> LjekoviGlavobolja = new List<string>();
 
@@ -39,7 +40,7 @@ namespace PrirodnaLjekarnaa
 
             if (lbxListaBolesti.SelectedItem.ToString() == "Mučnina")
             {
-                StreamReader sr = new StreamReader("..\\..\\LjekoviMucnina.txt");
+                StreamReader sr = new StreamReader(Admin.FilePath9);
                 string line = sr.ReadLine();
                 List<string> LjekoviMucnina = new List<string>();
 
@@ -55,7 +56,7 @@ namespace PrirodnaLjekarnaa
 
             if (lbxListaBolesti.SelectedItem.ToString() == "Žgaravica")
             {
-                StreamReader sr = new StreamReader("..\\..\\LjekoviZgaravica.txt");
+                StreamReader sr = new StreamReader(Admin.FilePath10);
                 string line = sr.ReadLine();
                 List<string> LjekoviZgaravica = new List<string>();
 
@@ -73,6 +74,67 @@ namespace PrirodnaLjekarnaa
         private void lbxPreporuceniProizvodi_SelectedIndexChanged(object sender, EventArgs e)
         {
             gbOdabraniProizvod.Visible = true;
+            string[] linija = lbxPreporuceniProizvodi.SelectedItem.ToString().Split('|');
+            tbIme.Text = linija[0];
+            tbLjekovitaSvojstva.Text = linija[1];
+            tbOpis.Text = linija[2];
+            tbCijena.Text = linija[3];
         }
+
+        private void btnKupiProizvod_Click(object sender, EventArgs e)
+        {
+            string linija1 = tbIme.Text;
+            string linija2 = tbCijena.Text;
+
+            if (lbxPreporuceniProizvodi.SelectedIndex != -1)
+            {
+                StreamWriter sw = new StreamWriter(Admin.FilePath5, true);
+                if (linija1 != "")
+                {
+                    sw.WriteLine("{0}|{1}", linija1, linija2);
+                    tbIme.Text = "";
+                    tbLjekovitaSvojstva.Text = "";
+                    tbOpis.Text = "";
+                    tbCijena.Text = "";
+
+
+                }
+
+                sw.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("Nije odabran proizvod! Odaberite proizvod koji želite kupiti!");
+            }
+        }
+
+        private void btnUKosaricu_Click(object sender, EventArgs e)
+        {
+            string linija1 = tbIme.Text;
+            string linija2 = tbLjekovitaSvojstva.Text;
+            string linija3 = tbOpis.Text;
+            string linija4 = tbCijena.Text;
+
+            //trebalo bi dodat ono sta provjerava jel u kosarici manje od 7 proizvoda
+            StreamWriter sw = new StreamWriter(Admin.FilePath6, true);
+            if (lbxPreporuceniProizvodi.SelectedIndex != -1)
+                {
+                    sw.WriteLine("{0}|{1}|{2}|{3}", linija1, linija2, linija3, linija4);
+                    tbIme.Text = "";
+                    tbLjekovitaSvojstva.Text = "";
+                    tbOpis.Text = "";
+                    tbCijena.Text = "";
+
+                sw.Close();
+                MessageBox.Show("Odabrani proizvod je spremljen u košaricu!");
+                }
+            else
+            {
+                MessageBox.Show("Nije odabran proizvod! Odaberite proizvod koji želite dodati u košaricu!");
+            }
+
+                sw.Close();
+            }
     }
 }

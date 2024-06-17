@@ -87,7 +87,7 @@ namespace PrirodnaLjekarnaa
             textBox2.Text = linija[0];
             textBox3.Text = linija[1];
             textBox4.Text = linija[2];
-            textBox1.Text = linija[2];
+            textBox1.Text = linija[3];
 
             // izvest to sa slikama nemam blage veze kako 
 

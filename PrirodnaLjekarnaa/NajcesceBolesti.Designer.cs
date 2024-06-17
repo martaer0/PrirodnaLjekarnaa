@@ -35,17 +35,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbxPreporuceniProizvodi = new System.Windows.Forms.ListBox();
             this.gbOdabraniProizvod = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbOpis = new System.Windows.Forms.TextBox();
+            this.tbLjekovitaSvojstva = new System.Windows.Forms.TextBox();
+            this.tbIme = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUKosaricu = new System.Windows.Forms.Button();
+            this.btnKupiProizvod = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.naslovnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ispisKorisnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,8 +56,9 @@
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbCijena = new System.Windows.Forms.TextBox();
             this.gbOdabraniProizvod.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,48 +118,49 @@
             // 
             // gbOdabraniProizvod
             // 
-            this.gbOdabraniProizvod.Controls.Add(this.textBox3);
-            this.gbOdabraniProizvod.Controls.Add(this.textBox2);
-            this.gbOdabraniProizvod.Controls.Add(this.textBox1);
+            this.gbOdabraniProizvod.Controls.Add(this.tbCijena);
+            this.gbOdabraniProizvod.Controls.Add(this.label9);
+            this.gbOdabraniProizvod.Controls.Add(this.tbOpis);
+            this.gbOdabraniProizvod.Controls.Add(this.tbLjekovitaSvojstva);
+            this.gbOdabraniProizvod.Controls.Add(this.tbIme);
             this.gbOdabraniProizvod.Controls.Add(this.label7);
             this.gbOdabraniProizvod.Controls.Add(this.label6);
             this.gbOdabraniProizvod.Controls.Add(this.label5);
-            this.gbOdabraniProizvod.Controls.Add(this.pictureBox1);
-            this.gbOdabraniProizvod.Location = new System.Drawing.Point(396, 89);
+            this.gbOdabraniProizvod.Location = new System.Drawing.Point(410, 89);
             this.gbOdabraniProizvod.Name = "gbOdabraniProizvod";
             this.gbOdabraniProizvod.Size = new System.Drawing.Size(378, 300);
             this.gbOdabraniProizvod.TabIndex = 5;
             this.gbOdabraniProizvod.TabStop = false;
             this.gbOdabraniProizvod.Visible = false;
             // 
-            // textBox3
+            // tbOpis
             // 
-            this.textBox3.Location = new System.Drawing.Point(57, 199);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(304, 90);
-            this.textBox3.TabIndex = 6;
+            this.tbOpis.Location = new System.Drawing.Point(15, 183);
+            this.tbOpis.Multiline = true;
+            this.tbOpis.Name = "tbOpis";
+            this.tbOpis.Size = new System.Drawing.Size(282, 68);
+            this.tbOpis.TabIndex = 6;
             // 
-            // textBox2
+            // tbLjekovitaSvojstva
             // 
-            this.textBox2.Location = new System.Drawing.Point(183, 85);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 95);
-            this.textBox2.TabIndex = 5;
+            this.tbLjekovitaSvojstva.Location = new System.Drawing.Point(15, 74);
+            this.tbLjekovitaSvojstva.Multiline = true;
+            this.tbLjekovitaSvojstva.Name = "tbLjekovitaSvojstva";
+            this.tbLjekovitaSvojstva.Size = new System.Drawing.Size(282, 73);
+            this.tbLjekovitaSvojstva.TabIndex = 5;
             // 
-            // textBox1
+            // tbIme
             // 
-            this.textBox1.Location = new System.Drawing.Point(221, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 22);
-            this.textBox1.TabIndex = 4;
+            this.tbIme.Location = new System.Drawing.Point(57, 16);
+            this.tbIme.Name = "tbIme";
+            this.tbIme.Size = new System.Drawing.Size(166, 22);
+            this.tbIme.TabIndex = 4;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.4F);
-            this.label7.Location = new System.Drawing.Point(6, 195);
+            this.label7.Location = new System.Drawing.Point(11, 160);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 20);
             this.label7.TabIndex = 3;
@@ -169,7 +170,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.4F);
-            this.label6.Location = new System.Drawing.Point(179, 62);
+            this.label6.Location = new System.Drawing.Point(11, 51);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(135, 20);
             this.label6.TabIndex = 2;
@@ -179,25 +180,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.4F);
-            this.label5.Location = new System.Drawing.Point(179, 30);
+            this.label5.Location = new System.Drawing.Point(11, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Ime:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 167);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(397, 61);
+            this.label4.Location = new System.Drawing.Point(405, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(172, 25);
             this.label4.TabIndex = 6;
@@ -211,25 +204,27 @@
             this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 7;
             // 
-            // button1
+            // btnUKosaricu
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.button1.Location = new System.Drawing.Point(520, 395);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 33);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Dodaj u košaricu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUKosaricu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnUKosaricu.Location = new System.Drawing.Point(534, 395);
+            this.btnUKosaricu.Name = "btnUKosaricu";
+            this.btnUKosaricu.Size = new System.Drawing.Size(173, 33);
+            this.btnUKosaricu.TabIndex = 8;
+            this.btnUKosaricu.Text = "Dodaj u košaricu";
+            this.btnUKosaricu.UseVisualStyleBackColor = true;
+            this.btnUKosaricu.Click += new System.EventHandler(this.btnUKosaricu_Click);
             // 
-            // button2
+            // btnKupiProizvod
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.button2.Location = new System.Drawing.Point(699, 395);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 33);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Kupi";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnKupiProizvod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.btnKupiProizvod.Location = new System.Drawing.Point(713, 395);
+            this.btnKupiProizvod.Name = "btnKupiProizvod";
+            this.btnKupiProizvod.Size = new System.Drawing.Size(75, 33);
+            this.btnKupiProizvod.TabIndex = 9;
+            this.btnKupiProizvod.Text = "Kupi";
+            this.btnKupiProizvod.UseVisualStyleBackColor = true;
+            this.btnKupiProizvod.Click += new System.EventHandler(this.btnKupiProizvod_Click);
             // 
             // menuStrip1
             // 
@@ -315,6 +310,23 @@
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.oNamaToolStripMenuItem.Text = "O nama";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.4F);
+            this.label9.Location = new System.Drawing.Point(11, 263);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 20);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Cijena:";
+            // 
+            // tbCijena
+            // 
+            this.tbCijena.Location = new System.Drawing.Point(74, 263);
+            this.tbCijena.Name = "tbCijena";
+            this.tbCijena.Size = new System.Drawing.Size(149, 22);
+            this.tbCijena.TabIndex = 8;
+            // 
             // NajcesceBolesti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,8 +334,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnKupiProizvod);
+            this.Controls.Add(this.btnUKosaricu);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.gbOdabraniProizvod);
@@ -336,7 +348,6 @@
             this.Text = "Najčešće bolesti";
             this.gbOdabraniProizvod.ResumeLayout(false);
             this.gbOdabraniProizvod.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -355,14 +366,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox tbOpis;
+        private System.Windows.Forms.TextBox tbLjekovitaSvojstva;
+        private System.Windows.Forms.TextBox tbIme;
+        private System.Windows.Forms.Button btnUKosaricu;
+        private System.Windows.Forms.Button btnKupiProizvod;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem naslovnicaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ispisKorisnikaToolStripMenuItem;
@@ -374,5 +384,7 @@
         private System.Windows.Forms.ToolStripMenuItem najčešćeBolestiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbCijena;
     }
 }

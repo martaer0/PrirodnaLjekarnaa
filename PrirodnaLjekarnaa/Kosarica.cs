@@ -22,18 +22,18 @@ namespace PrirodnaLjekarnaa
 
         private void Kosarica_Load(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader(Admin.FilePath6);
-            string line = sr.ReadLine();
-            List<string> ProizvodiKosarica = new List<string>();
+            //StreamReader sr = new StreamReader(Admin.FilePath6);
+            //string line = sr.ReadLine();
+            //List<string> ProizvodiKosarica = new List<string>();
 
-            while (line != null)
-            {
-                ProizvodiKosarica.Add(line);
-                line = sr.ReadLine();
-            }
+            //while (line != null)
+            //{
+            //    ProizvodiKosarica.Add(line);
+            //    line = sr.ReadLine();
+            //}
 
-            lbxProizvodiKosarica.DataSource = ProizvodiKosarica;
-            sr.Close();
+            //lbxProizvodiKosarica.DataSource = ProizvodiKosarica;
+            //sr.Close();
         }
 
         private void btnVodiNaKupovinu_Click(object sender, EventArgs e)
