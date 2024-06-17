@@ -18,16 +18,29 @@ namespace PrirodnaLjekarnaa
         {
             InitializeComponent();
         }
-    //povezivanje formi na MenuStrip
+        //povezivanje formi na MenuStrip
+        private void ispisKorisnikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PopisKupaca frmDodaj = new PopisKupaca();
+            frmDodaj.ShowDialog();
+        }
+
         private void dodajNovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DodajNovo frmDodaj = new DodajNovo();
             frmDodaj.ShowDialog();  
         }
 
-        private void proizvodiToolStripMenuItem_Click(object sender, EventArgs e)
+        private void proizvodiToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            Proizvodi frmDodaj = new Proizvodi();
+            frmDodaj.ShowDialog();
+        }
 
+        private void kupiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kupovina frmDodaj = new Kupovina();
+            frmDodaj.ShowDialog();
         }
 
         private void najčešćeBolestiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -130,5 +143,6 @@ namespace PrirodnaLjekarnaa
 
             sw.Close();
         }
+
     }
 }

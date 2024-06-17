@@ -33,6 +33,7 @@
             this.naslovnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ispisKorisnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proizvodiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proizvodiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.košaricaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kupiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,19 +84,27 @@
             // ispisKorisnikaToolStripMenuItem
             // 
             this.ispisKorisnikaToolStripMenuItem.Name = "ispisKorisnikaToolStripMenuItem";
-            this.ispisKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.ispisKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ispisKorisnikaToolStripMenuItem.Text = "Ispis korisnika";
+            this.ispisKorisnikaToolStripMenuItem.Click += new System.EventHandler(this.ispisKorisnikaToolStripMenuItem_Click);
             // 
             // proizvodiToolStripMenuItem
             // 
             this.proizvodiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.proizvodiToolStripMenuItem1,
             this.košaricaToolStripMenuItem,
             this.kupiToolStripMenuItem,
             this.dodajNovoToolStripMenuItem});
             this.proizvodiToolStripMenuItem.Name = "proizvodiToolStripMenuItem";
-            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
-            this.proizvodiToolStripMenuItem.Text = "Proizvodi";
-            this.proizvodiToolStripMenuItem.Click += new System.EventHandler(this.proizvodiToolStripMenuItem_Click);
+            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.proizvodiToolStripMenuItem.Text = "Ljekarna";
+            // 
+            // proizvodiToolStripMenuItem1
+            // 
+            this.proizvodiToolStripMenuItem1.Name = "proizvodiToolStripMenuItem1";
+            this.proizvodiToolStripMenuItem1.Size = new System.Drawing.Size(170, 26);
+            this.proizvodiToolStripMenuItem1.Text = "Proizvodi";
+            this.proizvodiToolStripMenuItem1.Click += new System.EventHandler(this.proizvodiToolStripMenuItem1_Click);
             // 
             // košaricaToolStripMenuItem
             // 
@@ -109,6 +118,7 @@
             this.kupiToolStripMenuItem.Name = "kupiToolStripMenuItem";
             this.kupiToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.kupiToolStripMenuItem.Text = "Kupi";
+            this.kupiToolStripMenuItem.Click += new System.EventHandler(this.kupiToolStripMenuItem_Click);
             // 
             // dodajNovoToolStripMenuItem
             // 
@@ -243,7 +253,7 @@
             this.buttonPrijava.UseVisualStyleBackColor = true;
             this.buttonPrijava.Click += new System.EventHandler(this.buttonPrijava_Click);
             // 
-            // Form1
+            // NaslovnaStranicaPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,7 +266,7 @@
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form1";
+            this.Name = "NaslovnaStranicaPL";
             this.Text = "Naslovnica";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -290,6 +300,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonPrijava;
+        private System.Windows.Forms.ToolStripMenuItem proizvodiToolStripMenuItem1;
     }
 }
 

@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kosarica));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.gbProizvodiKosarica = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxProizvodiKosarica = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnVodiNaKupovinu = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnObrisiProizvod = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.naslovnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,69 +48,42 @@
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1.SuspendLayout();
+            this.btnPotvrdi = new System.Windows.Forms.Button();
+            this.gbProizvodiKosarica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gbProizvodiKosarica
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.listBox2);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(335, 42);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(436, 396);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(266, 364);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(144, 22);
-            this.maskedTextBox1.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label3.Location = new System.Drawing.Point(196, 365);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 18);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Ukupno:";
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(320, 54);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(90, 292);
-            this.listBox2.TabIndex = 3;
+            this.gbProizvodiKosarica.Controls.Add(this.btnPotvrdi);
+            this.gbProizvodiKosarica.Controls.Add(this.label2);
+            this.gbProizvodiKosarica.Controls.Add(this.lbxProizvodiKosarica);
+            this.gbProizvodiKosarica.Controls.Add(this.label1);
+            this.gbProizvodiKosarica.Location = new System.Drawing.Point(335, 42);
+            this.gbProizvodiKosarica.Name = "gbProizvodiKosarica";
+            this.gbProizvodiKosarica.Size = new System.Drawing.Size(436, 396);
+            this.gbProizvodiKosarica.TabIndex = 1;
+            this.gbProizvodiKosarica.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(315, 18);
+            this.label2.Location = new System.Drawing.Point(290, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Cijena";
             // 
-            // listBox1
+            // lbxProizvodiKosarica
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(21, 54);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(264, 292);
-            this.listBox1.TabIndex = 1;
+            this.lbxProizvodiKosarica.FormattingEnabled = true;
+            this.lbxProizvodiKosarica.ItemHeight = 16;
+            this.lbxProizvodiKosarica.Location = new System.Drawing.Point(21, 54);
+            this.lbxProizvodiKosarica.Name = "lbxProizvodiKosarica";
+            this.lbxProizvodiKosarica.Size = new System.Drawing.Size(389, 292);
+            this.lbxProizvodiKosarica.TabIndex = 1;
             // 
             // label1
             // 
@@ -124,15 +94,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Proizvodi";
             // 
-            // button2
+            // btnVodiNaKupovinu
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button2.Location = new System.Drawing.Point(205, 383);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 44);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Kupi";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnVodiNaKupovinu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnVodiNaKupovinu.Location = new System.Drawing.Point(205, 383);
+            this.btnVodiNaKupovinu.Name = "btnVodiNaKupovinu";
+            this.btnVodiNaKupovinu.Size = new System.Drawing.Size(94, 44);
+            this.btnVodiNaKupovinu.TabIndex = 5;
+            this.btnVodiNaKupovinu.Text = "Kupi";
+            this.btnVodiNaKupovinu.UseVisualStyleBackColor = true;
+            this.btnVodiNaKupovinu.Click += new System.EventHandler(this.btnVodiNaKupovinu_Click);
             // 
             // pictureBox1
             // 
@@ -144,15 +115,16 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnObrisiProizvod
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button1.Location = new System.Drawing.Point(67, 384);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 44);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Obriši proizvod";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnObrisiProizvod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnObrisiProizvod.Location = new System.Drawing.Point(43, 385);
+            this.btnObrisiProizvod.Name = "btnObrisiProizvod";
+            this.btnObrisiProizvod.Size = new System.Drawing.Size(156, 43);
+            this.btnObrisiProizvod.TabIndex = 3;
+            this.btnObrisiProizvod.Text = "Obriši proizvod";
+            this.btnObrisiProizvod.UseVisualStyleBackColor = true;
+            this.btnObrisiProizvod.Click += new System.EventHandler(this.btnObrisiProizvod_Click);
             // 
             // label4
             // 
@@ -248,21 +220,33 @@
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.oNamaToolStripMenuItem.Text = "O nama";
             // 
-            // Form2
+            // btnPotvrdi
+            // 
+            this.btnPotvrdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnPotvrdi.Location = new System.Drawing.Point(295, 353);
+            this.btnPotvrdi.Name = "btnPotvrdi";
+            this.btnPotvrdi.Size = new System.Drawing.Size(115, 33);
+            this.btnPotvrdi.TabIndex = 8;
+            this.btnPotvrdi.Text = "Potvrdi";
+            this.btnPotvrdi.UseVisualStyleBackColor = true;
+            this.btnPotvrdi.Click += new System.EventHandler(this.btnPotvrdi_Click);
+            // 
+            // Kosarica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnObrisiProizvod);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "Form2";
+            this.Controls.Add(this.btnVodiNaKupovinu);
+            this.Controls.Add(this.gbProizvodiKosarica);
+            this.Name = "Kosarica";
             this.Text = "Košarica";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.Kosarica_Load);
+            this.gbProizvodiKosarica.ResumeLayout(false);
+            this.gbProizvodiKosarica.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -272,16 +256,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbProizvodiKosarica;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxProizvodiKosarica;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnVodiNaKupovinu;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnObrisiProizvod;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem naslovnicaToolStripMenuItem;
@@ -294,5 +275,6 @@
         private System.Windows.Forms.ToolStripMenuItem najčešćeBolestiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
+        private System.Windows.Forms.Button btnPotvrdi;
     }
 }

@@ -18,17 +18,6 @@ namespace PrirodnaLjekarnaa
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Filter = "Image|*.png;*.jpg;*.bmp;*.gif;*.pdf";
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    pictureBox1.Image = Image.FromFile(@openFileDialog.FileName);
-                }
-            }
-        }
 
         
         private void btnDodajproizvod_Click(object sender, EventArgs e)
@@ -36,8 +25,9 @@ namespace PrirodnaLjekarnaa
             string ImeProizvoda = tbimeProizvoda.Text;
             string LjekovitaSvojstva = tbLjekovitaSvojstva.Text;
             string Opis = tbOpis.Text;
+            string Cijena = tbCijena.Text;
 
-            if(ImeProizvoda == "" || LjekovitaSvojstva == "" || Opis == "")
+            if(ImeProizvoda == "" || LjekovitaSvojstva == "" || Opis == "" || Cijena == "")
             {
                 MessageBox.Show("Nisu uneseni podaci!");
             }
@@ -46,15 +36,16 @@ namespace PrirodnaLjekarnaa
             {
                 
                 StreamWriter sw = new StreamWriter(Admin.FilePath1, true);
-                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "")
+                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != "")
                 {
-                    sw.WriteLine("{0}\n{1}\n{2}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis);
+                    sw.WriteLine("{0}\n{1}\n{2}\n{3}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis, Cijena);
 
                     MessageBox.Show("Vaš proizvod uspješno je unesen!");
 
                     tbimeProizvoda.Text = "";
                     tbLjekovitaSvojstva.Text = "";
                     tbOpis.Text = "";
+                    tbCijena.Text = "";
                 }
 
                 sw.Close();
@@ -63,15 +54,16 @@ namespace PrirodnaLjekarnaa
             else if (rbSokoviSirupi.Checked)
             {
                 StreamWriter sw = new StreamWriter(Admin.FilePath2, true);
-                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "")
+                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != "")
                 {
-                    sw.WriteLine("{0}\n{1}\n{2}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis);
+                    sw.WriteLine("{0}\n{1}\n{2}\n{3}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis, Cijena);
 
                     MessageBox.Show("Vaš proizvod uspješno je unesen!");
 
                     tbimeProizvoda.Text = "";
                     tbLjekovitaSvojstva.Text = "";
                     tbOpis.Text = "";
+                    tbCijena.Text = "";
                 }
 
                 sw.Close();
@@ -80,15 +72,16 @@ namespace PrirodnaLjekarnaa
             else if (rbEtericnaUlja.Checked)
             {
                 StreamWriter sw = new StreamWriter(Admin.FilePath3, true);
-                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "")
+                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != "")
                 {
-                    sw.WriteLine("{0}\n{1}\n{2}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis);
+                    sw.WriteLine("{0}\n{1}\n{2}\n{3}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis, Cijena);
 
                     MessageBox.Show("Vaš proizvod uspješno je unesen!");
 
                     tbimeProizvoda.Text = "";
                     tbLjekovitaSvojstva.Text = "";
                     tbOpis.Text = "";
+                    tbCijena.Text = "";
                 }
 
                 sw.Close();
@@ -97,22 +90,23 @@ namespace PrirodnaLjekarnaa
             else if (rbKremeMasti.Checked)
             {
                 StreamWriter sw = new StreamWriter(Admin.FilePath4, true);
-                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "")
+                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != "")
                 {
-                    sw.WriteLine("{0}\n{1}\n{2}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis);
+                    sw.WriteLine("{0}\n{1}\n{2}\n{3}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis, Cijena);
 
                     MessageBox.Show("Vaš proizvod uspješno je unesen!");
 
                     tbimeProizvoda.Text = "";
                     tbLjekovitaSvojstva.Text = "";
                     tbOpis.Text = "";
+                    tbCijena.Text = "";
                 }
 
                 sw.Close();
             }
 
             else
-            { if(ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "")
+            { if(ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != "")
                 MessageBox.Show("Nije odabrana klasifikacija proizvoda!");
             }
         }
@@ -126,6 +120,7 @@ namespace PrirodnaLjekarnaa
             tbimeProizvoda.Text = "";
             tbLjekovitaSvojstva.Text = "";
             tbOpis.Text = "";
+            tbCijena.Text = "";
         }
     }
 }
