@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopisKupaca));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.naslovnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ispisKupacaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,7 +135,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(310, 44);
+            this.label2.Location = new System.Drawing.Point(357, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(158, 23);
             this.label2.TabIndex = 18;
@@ -145,7 +146,7 @@
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(6, 27);
+            this.listBox1.Location = new System.Drawing.Point(10, 25);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(246, 292);
             this.listBox1.TabIndex = 19;
@@ -154,7 +155,7 @@
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(314, 71);
+            this.listBox2.Location = new System.Drawing.Point(361, 71);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(333, 228);
             this.listBox2.TabIndex = 20;
@@ -174,23 +175,24 @@
             this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 44);
+            this.groupBox1.Location = new System.Drawing.Point(57, 44);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(262, 374);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista kupaca: ";
             // 
-            // Form4
+            // PopisKupaca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Form4";
+            this.Name = "PopisKupaca";
             this.Text = "Form4";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

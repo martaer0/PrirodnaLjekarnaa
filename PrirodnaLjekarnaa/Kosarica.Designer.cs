@@ -60,9 +60,9 @@
             this.gbProizvodiKosarica.Controls.Add(this.label2);
             this.gbProizvodiKosarica.Controls.Add(this.lbxProizvodiKosarica);
             this.gbProizvodiKosarica.Controls.Add(this.label1);
-            this.gbProizvodiKosarica.Location = new System.Drawing.Point(335, 42);
+            this.gbProizvodiKosarica.Location = new System.Drawing.Point(344, 49);
             this.gbProizvodiKosarica.Name = "gbProizvodiKosarica";
-            this.gbProizvodiKosarica.Size = new System.Drawing.Size(436, 396);
+            this.gbProizvodiKosarica.Size = new System.Drawing.Size(410, 377);
             this.gbProizvodiKosarica.TabIndex = 1;
             this.gbProizvodiKosarica.TabStop = false;
             // 
@@ -82,7 +82,7 @@
             this.lbxProizvodiKosarica.ItemHeight = 16;
             this.lbxProizvodiKosarica.Location = new System.Drawing.Point(21, 54);
             this.lbxProizvodiKosarica.Name = "lbxProizvodiKosarica";
-            this.lbxProizvodiKosarica.Size = new System.Drawing.Size(389, 292);
+            this.lbxProizvodiKosarica.Size = new System.Drawing.Size(368, 260);
             this.lbxProizvodiKosarica.TabIndex = 1;
             // 
             // label1
@@ -223,7 +223,7 @@
             // btnPotvrdi
             // 
             this.btnPotvrdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnPotvrdi.Location = new System.Drawing.Point(295, 353);
+            this.btnPotvrdi.Location = new System.Drawing.Point(274, 330);
             this.btnPotvrdi.Name = "btnPotvrdi";
             this.btnPotvrdi.Size = new System.Drawing.Size(115, 33);
             this.btnPotvrdi.TabIndex = 8;
@@ -235,6 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label4);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodajNovo));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbKremeMasti = new System.Windows.Forms.RadioButton();
@@ -94,7 +95,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(723, 341);
+            this.groupBox1.Size = new System.Drawing.Size(712, 328);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -146,7 +147,7 @@
             // btnDodajproizvod
             // 
             this.btnDodajproizvod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnDodajproizvod.Location = new System.Drawing.Point(467, 292);
+            this.btnDodajproizvod.Location = new System.Drawing.Point(467, 278);
             this.btnDodajproizvod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDodajproizvod.Name = "btnDodajproizvod";
             this.btnDodajproizvod.Size = new System.Drawing.Size(117, 34);
@@ -158,7 +159,7 @@
             // btnOdustani
             // 
             this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnOdustani.Location = new System.Drawing.Point(590, 292);
+            this.btnOdustani.Location = new System.Drawing.Point(590, 278);
             this.btnOdustani.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(108, 34);
@@ -229,7 +230,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(24, 60);
+            this.label3.Location = new System.Drawing.Point(24, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 25);
             this.label3.TabIndex = 3;
@@ -248,7 +249,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -324,7 +325,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(24, 292);
+            this.label2.Location = new System.Drawing.Point(24, 281);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 25);
             this.label2.TabIndex = 15;
@@ -332,7 +333,7 @@
             // 
             // tbCijena
             // 
-            this.tbCijena.Location = new System.Drawing.Point(95, 292);
+            this.tbCijena.Location = new System.Drawing.Point(95, 281);
             this.tbCijena.Name = "tbCijena";
             this.tbCijena.Size = new System.Drawing.Size(142, 24);
             this.tbCijena.TabIndex = 16;
@@ -340,7 +341,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(243, 298);
+            this.label7.Location = new System.Drawing.Point(243, 286);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 18);
             this.label7.TabIndex = 17;
@@ -350,6 +351,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
