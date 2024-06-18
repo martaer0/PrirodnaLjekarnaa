@@ -35,6 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbxPreporuceniProizvodi = new System.Windows.Forms.ListBox();
             this.gbOdabraniProizvod = new System.Windows.Forms.GroupBox();
+            this.tbCijena = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.tbOpis = new System.Windows.Forms.TextBox();
             this.tbLjekovitaSvojstva = new System.Windows.Forms.TextBox();
             this.tbIme = new System.Windows.Forms.TextBox();
@@ -45,19 +47,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnUKosaricu = new System.Windows.Forms.Button();
             this.btnKupiProizvod = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.naslovnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ispisKorisnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proizvodiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proizvodiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.košaricaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kupiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tbCijena = new System.Windows.Forms.TextBox();
             this.gbOdabraniProizvod.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -132,6 +132,23 @@
             this.gbOdabraniProizvod.TabIndex = 5;
             this.gbOdabraniProizvod.TabStop = false;
             this.gbOdabraniProizvod.Visible = false;
+            // 
+            // tbCijena
+            // 
+            this.tbCijena.Location = new System.Drawing.Point(74, 263);
+            this.tbCijena.Name = "tbCijena";
+            this.tbCijena.Size = new System.Drawing.Size(149, 22);
+            this.tbCijena.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.4F);
+            this.label9.Location = new System.Drawing.Point(11, 263);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 20);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Cijena:";
             // 
             // tbOpis
             // 
@@ -226,63 +243,77 @@
             this.btnKupiProizvod.UseVisualStyleBackColor = true;
             this.btnKupiProizvod.Click += new System.EventHandler(this.btnKupiProizvod_Click);
             // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.Location = new System.Drawing.Point(534, 431);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(199, 16);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "*košarica može imate najviše 7 proizvoda";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.Enabled = false;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.naslovnicaToolStripMenuItem,
             this.proizvodiToolStripMenuItem,
             this.doktorToolStripMenuItem,
-            this.pomoćToolStripMenuItem,
             this.oNamaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
-            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // naslovnicaToolStripMenuItem
             // 
-            this.naslovnicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ispisKorisnikaToolStripMenuItem});
             this.naslovnicaToolStripMenuItem.Name = "naslovnicaToolStripMenuItem";
             this.naslovnicaToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
             this.naslovnicaToolStripMenuItem.Text = "Naslovnica";
-            // 
-            // ispisKorisnikaToolStripMenuItem
-            // 
-            this.ispisKorisnikaToolStripMenuItem.Name = "ispisKorisnikaToolStripMenuItem";
-            this.ispisKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
-            this.ispisKorisnikaToolStripMenuItem.Text = "Ispis korisnika";
+            this.naslovnicaToolStripMenuItem.Click += new System.EventHandler(this.naslovnicaToolStripMenuItem_Click);
             // 
             // proizvodiToolStripMenuItem
             // 
             this.proizvodiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.proizvodiToolStripMenuItem1,
             this.košaricaToolStripMenuItem,
             this.kupiToolStripMenuItem,
             this.dodajNovoToolStripMenuItem});
             this.proizvodiToolStripMenuItem.Name = "proizvodiToolStripMenuItem";
-            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
-            this.proizvodiToolStripMenuItem.Text = "Proizvodi";
+            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.proizvodiToolStripMenuItem.Text = "Ljekarna";
+            // 
+            // proizvodiToolStripMenuItem1
+            // 
+            this.proizvodiToolStripMenuItem1.Name = "proizvodiToolStripMenuItem1";
+            this.proizvodiToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.proizvodiToolStripMenuItem1.Text = "Proizvodi";
+            this.proizvodiToolStripMenuItem1.Click += new System.EventHandler(this.proizvodiToolStripMenuItem1_Click);
             // 
             // košaricaToolStripMenuItem
             // 
             this.košaricaToolStripMenuItem.Name = "košaricaToolStripMenuItem";
-            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.košaricaToolStripMenuItem.Text = "Košarica";
+            this.košaricaToolStripMenuItem.Click += new System.EventHandler(this.košaricaToolStripMenuItem_Click);
             // 
             // kupiToolStripMenuItem
             // 
             this.kupiToolStripMenuItem.Name = "kupiToolStripMenuItem";
-            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.kupiToolStripMenuItem.Text = "Kupi";
+            this.kupiToolStripMenuItem.Click += new System.EventHandler(this.kupiToolStripMenuItem_Click);
             // 
             // dodajNovoToolStripMenuItem
             // 
             this.dodajNovoToolStripMenuItem.Name = "dodajNovoToolStripMenuItem";
-            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dodajNovoToolStripMenuItem.Text = "Dodaj novo";
+            this.dodajNovoToolStripMenuItem.Click += new System.EventHandler(this.dodajNovoToolStripMenuItem_Click);
             // 
             // doktorToolStripMenuItem
             // 
@@ -295,37 +326,15 @@
             // najčešćeBolestiToolStripMenuItem
             // 
             this.najčešćeBolestiToolStripMenuItem.Name = "najčešćeBolestiToolStripMenuItem";
-            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.najčešćeBolestiToolStripMenuItem.Text = "Najčešće bolesti";
-            // 
-            // pomoćToolStripMenuItem
-            // 
-            this.pomoćToolStripMenuItem.Name = "pomoćToolStripMenuItem";
-            this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
-            this.pomoćToolStripMenuItem.Text = "Pomoć";
             // 
             // oNamaToolStripMenuItem
             // 
             this.oNamaToolStripMenuItem.Name = "oNamaToolStripMenuItem";
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.oNamaToolStripMenuItem.Text = "O nama";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.4F);
-            this.label9.Location = new System.Drawing.Point(11, 263);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 20);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Cijena:";
-            // 
-            // tbCijena
-            // 
-            this.tbCijena.Location = new System.Drawing.Point(74, 263);
-            this.tbCijena.Name = "tbCijena";
-            this.tbCijena.Size = new System.Drawing.Size(149, 22);
-            this.tbCijena.TabIndex = 8;
+            this.oNamaToolStripMenuItem.Click += new System.EventHandler(this.oNamaToolStripMenuItem_Click);
             // 
             // NajcesceBolesti
             // 
@@ -334,6 +343,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnKupiProizvod);
             this.Controls.Add(this.btnUKosaricu);
             this.Controls.Add(this.label8);
@@ -373,18 +383,18 @@
         private System.Windows.Forms.TextBox tbIme;
         private System.Windows.Forms.Button btnUKosaricu;
         private System.Windows.Forms.Button btnKupiProizvod;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbCijena;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem naslovnicaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ispisKorisnikaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proizvodiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem proizvodiToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem košaricaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kupiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajNovoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doktorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem najčešćeBolestiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tbCijena;
     }
 }

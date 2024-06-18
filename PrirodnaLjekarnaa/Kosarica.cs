@@ -22,18 +22,29 @@ namespace PrirodnaLjekarnaa
 
         private void Kosarica_Load(object sender, EventArgs e)
         {
-            //StreamReader sr = new StreamReader(Admin.FilePath6);
-            //string line = sr.ReadLine();
-            //List<string> ProizvodiKosarica = new List<string>();
+            StreamReader sr = new StreamReader(Admin.FilePath6);
+            StreamReader sr1 = new StreamReader(Admin.FilePath6_1);
+            string line = sr.ReadLine();
+            string line1 = sr.ReadLine();
 
-            //while (line != null)
-            //{
-            //    ProizvodiKosarica.Add(line);
-            //    line = sr.ReadLine();
-            //}
+            List<string> ProizvodiKosarica = new List<string>();
 
-            //lbxProizvodiKosarica.DataSource = ProizvodiKosarica;
-            //sr.Close();
+            while (line != null)
+            {
+                ProizvodiKosarica.Add(line);
+                line = sr.ReadLine();
+            }
+
+            while (line1 != null)
+            {
+                ProizvodiKosarica.Add(line1);
+                line1 = sr1.ReadLine();
+            }
+
+
+
+            lbxProizvodiKosarica.DataSource = ProizvodiKosarica;
+            sr.Close();
         }
 
         private void btnVodiNaKupovinu_Click(object sender, EventArgs e)
@@ -68,8 +79,57 @@ namespace PrirodnaLjekarnaa
 
             sw.Close();
 
+            File.Delete(Admin.FilePath6);
+            File.Delete(Admin.FilePath6_1);
+
+
             MessageBox.Show("Uspješno potvrđen sadržaj košarice!");
             gbProizvodiKosarica.Enabled = false;
+        }
+
+
+
+
+        private void naslovnicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NaslovnaStranicaPL frmDodaj = new NaslovnaStranicaPL();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void proizvodiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Proizvodi frmDodaj = new Proizvodi();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void kupiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kupovina frmDodaj = new Kupovina();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void dodajNovoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DodajNovo frmDodaj = new DodajNovo();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void najčešćeBolestiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NajcesceBolesti frmDodaj = new NajcesceBolesti();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void oNamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Onama2 frmDodaj = new Onama2();
+            frmDodaj.ShowDialog();
+            this.Close();
         }
     }
 }

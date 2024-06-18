@@ -61,7 +61,7 @@ namespace PrirodnaLjekarnaa
         //samo kad je jedan proizvod odabran - razlog ovomu je da se moze odmah samo jedan proizvod uzest bez koraka za kosaricu
         private void JedanProizvod_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("Kupovina.txt");
+            StreamReader sr = new StreamReader("..\\..\\Kupovina.txt");
             string line = sr.ReadLine();
             int val1 = 1;
 
@@ -93,7 +93,7 @@ namespace PrirodnaLjekarnaa
         //cijela kosarica
         private void Kosarica_CheckedChanged(object sender, EventArgs e)
         {            
-            using (StreamReader reader = new StreamReader(Admin.FilePath6))
+            using (StreamReader reader = new StreamReader("..\\..\\PotvrdenaKosarica.txt"))
             {              
                 
                 int lNb1 = 1, lNb2 = 2, lNb3 = 3, lNb4 = 4, lNb5 = 5, lNb6 = 6, lNb7 = 7;
@@ -142,10 +142,11 @@ namespace PrirodnaLjekarnaa
             {
                 BrisanjeLinije(textBox11, maskedTextBox16, maskedTextBox6, maskedTextBox11);
 
-                File.WriteAllText(Admin.FilePath5, "");
-            }      
-            
-            if(Kosarica.Checked == true)
+                File.Delete(Admin.FilePath5);
+
+            }
+
+            if (Kosarica.Checked == true)
             {
                 BrisanjeLinije(textBox11, maskedTextBox16, maskedTextBox6, maskedTextBox11);
             }
@@ -189,7 +190,7 @@ namespace PrirodnaLjekarnaa
         {
             if (Kosarica.Checked == true)
             {
-                BrisanjeLinije(textBox7, maskedTextBox17, maskedTextBox21, maskedTextBox22);
+                BrisanjeLinije(textBox7, maskedTextBox17, maskedTextBox21, maskedTextBox25);
             }
         }
 
@@ -197,7 +198,7 @@ namespace PrirodnaLjekarnaa
         {
             if (Kosarica.Checked == true)
             {
-                BrisanjeLinije(textBox8, maskedTextBox18, maskedTextBox25, maskedTextBox26);
+                BrisanjeLinije(textBox8, maskedTextBox18, maskedTextBox22, maskedTextBox26);
             }
         }
 
@@ -208,7 +209,8 @@ namespace PrirodnaLjekarnaa
             if(JedanProizvod.Checked == true)
             {
                 BrisanjeLinije(textBox11, maskedTextBox16, maskedTextBox6, maskedTextBox11);
-                File.WriteAllText(Admin.FilePath5, "");
+                File.Delete(Admin.FilePath5);
+
             }
 
 
@@ -221,6 +223,8 @@ namespace PrirodnaLjekarnaa
                 BrisanjeLinije(textBox5, maskedTextBox5, maskedTextBox10, maskedTextBox15);
                 BrisanjeLinije(textBox7, maskedTextBox17, maskedTextBox21, maskedTextBox25);
                 BrisanjeLinije(textBox8, maskedTextBox18, maskedTextBox22, maskedTextBox26);
+                File.Delete(Admin.FilePath7);
+
             }
 
             else MessageBox.Show("Niste označili način kupnje.");
@@ -233,25 +237,121 @@ namespace PrirodnaLjekarnaa
         {
             Proizvodi odvestProizvodi = new Proizvodi();
             odvestProizvodi.ShowDialog();
+            File.Delete(Admin.FilePath5);
+            this.Close();
         }
 
 
         //konacno - zavrsetak
         private void button4_Click(object sender, EventArgs e)
         {
-            if ((textBox11.Text != "" || textBox2.Text != "" || textBox3.Text != "" || textBox4.Text != "" || textBox5.Text != "" || textBox7.Text != "" || textBox8.Text != "") && textBox1.Text != "" && maskedTextBox1.Text != "")
+            if (Kosarica.Checked == true)
             {
-                string dolazak = DateTime.Now.ToString();
-                MessageBox.Show("Vaša kupnja je gotova. Očekivani dolazak pošiljke je {0}", dolazak);
+                if ((textBox11.Text != "" || textBox2.Text != "" || textBox3.Text != "" || textBox4.Text != "" || textBox5.Text != "" || textBox7.Text != "" || textBox8.Text != "") && textBox1.Text != "" && maskedTextBox1.Text != "")
+                {
+                    string dolazak = DateTime.Now.ToString() + 5;
+                    MessageBox.Show("Vaša kupnja je gotova. Očekivani dolazak pošiljke je {0}", dolazak);
 
-                //File.WriteAllText(Admin.FilePath6, "");
+                    File.Delete(Admin.FilePath5);
+                    File.Delete(Admin.FilePath7);
 
-                Proizvodi odvestProizvodi = new Proizvodi();
-                odvestProizvodi.ShowDialog();
+                    NaslovnaStranicaPL frmDodaj = new NaslovnaStranicaPL();
+                    frmDodaj.ShowDialog();
+                    this.Close();
+                }
+
+                else if((textBox11.Text != "" || textBox2.Text != "" || textBox3.Text != "" || textBox4.Text != "" || textBox5.Text != "" || textBox7.Text != "" || textBox8.Text != "") && (textBox1.Text == "" || maskedTextBox1.Text == ""))
+                {
+                    MessageBox.Show("Nisu svi podaci uneseni. Pokušajte ponovno.");
+                }
+                
+                else if(textBox11.Text == "" && textBox2.Text == "" && textBox3.Text == "" && textBox4.Text == "" && textBox5.Text == "" && textBox7.Text == "" && textBox8.Text == "")
+                {
+                    MessageBox.Show("U košarici nema ničega. Vratite se nazad!");
+                    File.Delete(Admin.FilePath7);
+
+                }
+
             }
 
-            else MessageBox.Show("Nisu svi podaci uneseni. Pokušajte ponovno.");
+            if (JedanProizvod.Checked == true)
+            {
+                if((textBox11.Text != "") && (textBox1.Text != "") && (maskedTextBox1.Text != ""))
+                {
+                    string dolazak = DateTime.Now.ToString();
+                    MessageBox.Show("Vaša kupnja je gotova. Očekivani dolazak pošiljke je {0}", dolazak);
 
+                    File.Delete(Admin.FilePath7);
+                    File.Delete(Admin.FilePath5);
+
+                    NaslovnaStranicaPL frmDodaj = new NaslovnaStranicaPL();
+                    frmDodaj.ShowDialog();
+                    this.Close();
+                }
+
+                else if ((textBox11.Text != "") && ((textBox1.Text == "") || (maskedTextBox1.Text == "")))
+                {
+                    MessageBox.Show("Nisu svi podaci uneseni. Pokušajte ponovno.");
+                }
+                
+                else if(textBox11.Text == "")
+                {
+                    MessageBox.Show("U poljima nema ničega. Vratite se na proizvode!");
+                }
+            }            
+
+            else MessageBox.Show("Niste označili način kupnje!");
+
+        }
+
+
+
+        private void naslovnicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NaslovnaStranicaPL frmDodaj = new NaslovnaStranicaPL();
+            frmDodaj.ShowDialog();
+            File.Delete(Admin.FilePath5);
+            this.Close();
+        }
+
+        private void proizvodiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Proizvodi frmDodaj = new Proizvodi();
+            frmDodaj.ShowDialog();
+            File.Delete(Admin.FilePath5);
+            this.Close();
+        }
+
+        private void košaricaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kosarica frmDodaj = new Kosarica();
+            frmDodaj.ShowDialog();
+            File.Delete(Admin.FilePath5);
+            this.Close();
+        }
+
+        private void dodajNovoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DodajNovo frmDodaj = new DodajNovo();
+            frmDodaj.ShowDialog();
+            File.Delete(Admin.FilePath5);
+            this.Close();
+        }
+
+        private void najčešćeBolestiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NajcesceBolesti frmDodaj = new NajcesceBolesti();
+            frmDodaj.ShowDialog();
+            File.Delete(Admin.FilePath5);
+            this.Close();
+        }
+
+        private void oNamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Onama2 frmDodaj = new Onama2();
+            frmDodaj.ShowDialog();
+            File.Delete(Admin.FilePath5);
+            this.Close();
         }
     }
 }

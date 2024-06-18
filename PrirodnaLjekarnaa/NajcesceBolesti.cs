@@ -24,7 +24,7 @@ namespace PrirodnaLjekarnaa
 
             if (lbxListaBolesti.SelectedItem.ToString() == "Glavobolja")
             {
-                StreamReader sr = new StreamReader(Admin.FilePath8);
+                StreamReader sr = new StreamReader("..\\..\\LjekoviGlavobolja");
                 string line = sr.ReadLine();
                 List<string> LjekoviGlavobolja = new List<string>();
 
@@ -40,7 +40,7 @@ namespace PrirodnaLjekarnaa
 
             if (lbxListaBolesti.SelectedItem.ToString() == "Mučnina")
             {
-                StreamReader sr = new StreamReader(Admin.FilePath9);
+                StreamReader sr = new StreamReader("..\\..\\LjekoviMucnina");
                 string line = sr.ReadLine();
                 List<string> LjekoviMucnina = new List<string>();
 
@@ -56,7 +56,7 @@ namespace PrirodnaLjekarnaa
 
             if (lbxListaBolesti.SelectedItem.ToString() == "Žgaravica")
             {
-                StreamReader sr = new StreamReader(Admin.FilePath10);
+                StreamReader sr = new StreamReader("..\\..\\LjekoviZgaravica");
                 string line = sr.ReadLine();
                 List<string> LjekoviZgaravica = new List<string>();
 
@@ -101,6 +101,10 @@ namespace PrirodnaLjekarnaa
                 }
 
                 sw.Close();
+
+                Kupovina odvestKosarica = new Kupovina();
+                odvestKosarica.ShowDialog();
+                this.Close();
             }
 
             else
@@ -109,6 +113,8 @@ namespace PrirodnaLjekarnaa
             }
         }
 
+
+
         private void btnUKosaricu_Click(object sender, EventArgs e)
         {
             string linija1 = tbIme.Text;
@@ -116,25 +122,69 @@ namespace PrirodnaLjekarnaa
             string linija3 = tbOpis.Text;
             string linija4 = tbCijena.Text;
 
-            //trebalo bi dodat ono sta provjerava jel u kosarici manje od 7 proizvoda
-            StreamWriter sw = new StreamWriter(Admin.FilePath6, true);
+            
+            StreamWriter sw = new StreamWriter(Admin.FilePath6_1, true);
             if (lbxPreporuceniProizvodi.SelectedIndex != -1)
-                {
-                    sw.WriteLine("{0}|{1}|{2}|{3}", linija1, linija2, linija3, linija4);
-                    tbIme.Text = "";
-                    tbLjekovitaSvojstva.Text = "";
-                    tbOpis.Text = "";
-                    tbCijena.Text = "";
+            {
+                sw.WriteLine("{0}|{1}|{2}|{3}", linija1, linija2, linija3, linija4);
+                tbIme.Text = "";
+                tbLjekovitaSvojstva.Text = "";
+                tbOpis.Text = "";
+                tbCijena.Text = "";
 
                 sw.Close();
+
                 MessageBox.Show("Odabrani proizvod je spremljen u košaricu!");
-                }
+            }
+
             else
             {
                 MessageBox.Show("Nije odabran proizvod! Odaberite proizvod koji želite dodati u košaricu!");
             }
 
-                sw.Close();
-            }
+            sw.Close();
+        }
+
+        private void naslovnicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NaslovnaStranicaPL frmDodaj = new NaslovnaStranicaPL();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void proizvodiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Proizvodi frmDodaj = new Proizvodi();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void košaricaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kosarica frmDodaj = new Kosarica();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void kupiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kupovina frmDodaj = new Kupovina();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void dodajNovoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DodajNovo frmDodaj = new DodajNovo();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void oNamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Onama2 frmDodaj = new Onama2();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
     }
 }
