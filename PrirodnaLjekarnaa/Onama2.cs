@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,6 +60,9 @@ namespace PrirodnaLjekarnaa
             this.Close();
         }
 
-
+        private void Onama2_Closed(object sender, EventArgs e)
+        {
+            File.Delete(Admin.FilePath5);
+        }
     }
 }

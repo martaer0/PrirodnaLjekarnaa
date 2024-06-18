@@ -22,8 +22,8 @@ namespace PrirodnaLjekarnaa
 
         private void Kosarica_Load(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader(Admin.FilePath6);
-            StreamReader sr1 = new StreamReader(Admin.FilePath6_1);
+            StreamReader sr = new StreamReader("..\\..\\DodavanjeUKosaricu.txt");
+            StreamReader sr1 = new StreamReader("..\\..\\DodavanjeUKosaricuPrekoBolesti.txt");
             string line = sr.ReadLine();
             string line1 = sr.ReadLine();
 

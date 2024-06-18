@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kosarica));
             this.gbProizvodiKosarica = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnPotvrdi = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lbxProizvodiKosarica = new System.Windows.Forms.ListBox();
@@ -48,7 +49,6 @@
             this.doktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label3 = new System.Windows.Forms.Label();
             this.gbProizvodiKosarica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -66,6 +66,15 @@
             this.gbProizvodiKosarica.Size = new System.Drawing.Size(410, 377);
             this.gbProizvodiKosarica.TabIndex = 1;
             this.gbProizvodiKosarica.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(18, 317);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(199, 23);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "*košarica može imati najviše 7 proizvoda";
             // 
             // btnPotvrdi
             // 
@@ -231,15 +240,6 @@
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.oNamaToolStripMenuItem.Text = "O nama";
             this.oNamaToolStripMenuItem.Click += new System.EventHandler(this.oNamaToolStripMenuItem_Click);
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(18, 317);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 23);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "*košarica može imate najviše 7 proizvoda";
             // 
             // Kosarica
             // 

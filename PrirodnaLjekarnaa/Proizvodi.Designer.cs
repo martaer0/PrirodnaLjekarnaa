@@ -1,4 +1,6 @@
-﻿namespace PrirodnaLjekarnaa
+﻿using System;
+
+namespace PrirodnaLjekarnaa
 {
     partial class Proizvodi
     {
@@ -375,6 +377,7 @@
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+            
 
         }
 

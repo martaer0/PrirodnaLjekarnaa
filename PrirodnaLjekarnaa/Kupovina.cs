@@ -14,7 +14,7 @@ namespace PrirodnaLjekarnaa
 {
     public partial class Kupovina : Form
     {
-        List<string> stringList = new List<string>();
+        //List<string> stringList = new List<string>();
 
         public Kupovina()
         {
@@ -31,7 +31,7 @@ namespace PrirodnaLjekarnaa
                 val = int.Parse(n.Text);
             }
 
-            double cijena = int.Parse(m.Text) * val;
+            double cijena = double.Parse(m.Text) * val;
             k.Text = cijena.ToString();
             return cijena;
         }
@@ -61,7 +61,8 @@ namespace PrirodnaLjekarnaa
         //samo kad je jedan proizvod odabran - razlog ovomu je da se moze odmah samo jedan proizvod uzest bez koraka za kosaricu
         private void JedanProizvod_CheckedChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("..\\..\\Kupovina.txt");
+            List<string> stringList = new List<string>();
+            StreamReader sr = new StreamReader("..\\..\\KupovinaJedanProizvod.txt");
             string line = sr.ReadLine();
             int val1 = 1;
 
@@ -80,7 +81,7 @@ namespace PrirodnaLjekarnaa
                 val1 = int.Parse(maskedTextBox11.Text);
             }
 
-            double cijena = int.Parse(maskedTextBox16.Text) * val1;
+            double cijena = double.Parse(maskedTextBox16.Text) * val1;
             maskedTextBox11.Text = cijena.ToString();
 
             double ukcijena = cijena + int.Parse(textBox6.Text);
@@ -278,7 +279,7 @@ namespace PrirodnaLjekarnaa
             {
                 if((textBox11.Text != "") && (textBox1.Text != "") && (maskedTextBox1.Text != ""))
                 {
-                    string dolazak = DateTime.Now.ToString();
+                    string dolazak = DateTime.Now.ToString() + 3;
                     MessageBox.Show("Vaša kupnja je gotova. Očekivani dolazak pošiljke je {0}", dolazak);
 
                     File.Delete(Admin.FilePath7);

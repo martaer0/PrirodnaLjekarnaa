@@ -15,7 +15,7 @@ namespace PrirodnaLjekarnaa
 
             public ListaKorisnika()
             {
-                StreamReader sr = new StreamReader(Admin.FilePath);
+                StreamReader sr = new StreamReader("..\\..\\KorisniciLjekarne");
                 while (!sr.EndOfStream)
                 {
                     string line = sr.ReadLine();
