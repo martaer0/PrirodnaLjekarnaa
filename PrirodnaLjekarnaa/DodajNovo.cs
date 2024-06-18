@@ -32,83 +32,62 @@ namespace PrirodnaLjekarnaa
                 MessageBox.Show("Nisu uneseni podaci!");
             }
 
+
             if (rbCajevi.Checked)
             {
+                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
+                File.AppendAllText("..\\..\\Cajevi.txt", linija + Environment.NewLine);
+
+                tbimeProizvoda.Text = "";
+                tbLjekovitaSvojstva.Text = "";
+                tbOpis.Text = "";
+                tbCijena.Text = "";
                 
-                StreamWriter sw = new StreamWriter(Admin.FilePath1, true);
-                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != "")
-                {
-                    sw.WriteLine("{0}\n{1}\n{2}\n{3}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis, Cijena);
-
-                    MessageBox.Show("Vaš proizvod uspješno je unesen!");
-
-                    tbimeProizvoda.Text = "";
-                    tbLjekovitaSvojstva.Text = "";
-                    tbOpis.Text = "";
-                    tbCijena.Text = "";
-                }
-
-                sw.Close();
             }
+
 
             else if (rbSokoviSirupi.Checked)
             {
-                StreamWriter sw = new StreamWriter(Admin.FilePath2, true);
-                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != "")
-                {
-                    sw.WriteLine("{0}\n{1}\n{2}\n{3}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis, Cijena);
+                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
+                File.AppendAllText("..\\..\\SokoviiSirupi.txt", linija + Environment.NewLine);
 
-                    MessageBox.Show("Vaš proizvod uspješno je unesen!");
-
-                    tbimeProizvoda.Text = "";
-                    tbLjekovitaSvojstva.Text = "";
-                    tbOpis.Text = "";
-                    tbCijena.Text = "";
-                }
-
-                sw.Close();
+                tbimeProizvoda.Text = "";
+                tbLjekovitaSvojstva.Text = "";
+                tbOpis.Text = "";
+                tbCijena.Text = "";
             }
+
 
             else if (rbEtericnaUlja.Checked)
             {
-                StreamWriter sw = new StreamWriter(Admin.FilePath3, true);
-                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != "")
-                {
-                    sw.WriteLine("{0}\n{1}\n{2}\n{3}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis, Cijena);
+                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
+                File.AppendAllText("..\\..\\EtericnaUlja.txt", linija + Environment.NewLine);
 
-                    MessageBox.Show("Vaš proizvod uspješno je unesen!");
-
-                    tbimeProizvoda.Text = "";
-                    tbLjekovitaSvojstva.Text = "";
-                    tbOpis.Text = "";
-                    tbCijena.Text = "";
-                }
-
-                sw.Close();
+                tbimeProizvoda.Text = "";
+                tbLjekovitaSvojstva.Text = "";
+                tbOpis.Text = "";
+                tbCijena.Text = "";
             }
+
 
             else if (rbKremeMasti.Checked)
             {
-                StreamWriter sw = new StreamWriter(Admin.FilePath4, true);
-                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != "")
-                {
-                    sw.WriteLine("{0}\n{1}\n{2}\n{3}\n\n", ImeProizvoda, LjekovitaSvojstva, Opis, Cijena);
+                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
+                File.AppendAllText("..\\..\\KremeiMasti.txt", linija + Environment.NewLine);
 
-                    MessageBox.Show("Vaš proizvod uspješno je unesen!");
+                tbimeProizvoda.Text = "";
+                tbLjekovitaSvojstva.Text = "";
+                tbOpis.Text = "";
+                tbCijena.Text = "";
 
-                    tbimeProizvoda.Text = "";
-                    tbLjekovitaSvojstva.Text = "";
-                    tbOpis.Text = "";
-                    tbCijena.Text = "";
-                }
-
-                sw.Close();
             }
 
             else
-            { if(ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != "")
+            { 
+                if (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != "")
                 MessageBox.Show("Nije odabrana klasifikacija proizvoda!");
             }
+
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -121,6 +100,48 @@ namespace PrirodnaLjekarnaa
             tbLjekovitaSvojstva.Text = "";
             tbOpis.Text = "";
             tbCijena.Text = "";
+        }
+
+        private void naslovnicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NaslovnaStranicaPL frmDodaj = new NaslovnaStranicaPL();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void proizvodiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Proizvodi frmDodaj = new Proizvodi();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void košaricaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kosarica frmDodaj = new Kosarica();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void kupiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kupovina frmDodaj = new Kupovina();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void najčešćeBolestiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NajcesceBolesti frmDodaj = new NajcesceBolesti();
+            frmDodaj.ShowDialog();
+            this.Close();
+        }
+
+        private void oNamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Onama2 frmDodaj = new Onama2();
+            frmDodaj.ShowDialog();
+            this.Close();
         }
     }
 }

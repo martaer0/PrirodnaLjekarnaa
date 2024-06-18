@@ -250,7 +250,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(199, 16);
             this.label10.TabIndex = 11;
-            this.label10.Text = "*košarica može imate najviše 7 proizvoda";
+            this.label10.Text = "*košarica može imati najviše 7 proizvoda";
             // 
             // menuStrip1
             // 
@@ -290,28 +290,28 @@
             // proizvodiToolStripMenuItem1
             // 
             this.proizvodiToolStripMenuItem1.Name = "proizvodiToolStripMenuItem1";
-            this.proizvodiToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.proizvodiToolStripMenuItem1.Size = new System.Drawing.Size(170, 26);
             this.proizvodiToolStripMenuItem1.Text = "Proizvodi";
             this.proizvodiToolStripMenuItem1.Click += new System.EventHandler(this.proizvodiToolStripMenuItem1_Click);
             // 
             // košaricaToolStripMenuItem
             // 
             this.košaricaToolStripMenuItem.Name = "košaricaToolStripMenuItem";
-            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.košaricaToolStripMenuItem.Text = "Košarica";
             this.košaricaToolStripMenuItem.Click += new System.EventHandler(this.košaricaToolStripMenuItem_Click);
             // 
             // kupiToolStripMenuItem
             // 
             this.kupiToolStripMenuItem.Name = "kupiToolStripMenuItem";
-            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.kupiToolStripMenuItem.Text = "Kupi";
             this.kupiToolStripMenuItem.Click += new System.EventHandler(this.kupiToolStripMenuItem_Click);
             // 
             // dodajNovoToolStripMenuItem
             // 
             this.dodajNovoToolStripMenuItem.Name = "dodajNovoToolStripMenuItem";
-            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.dodajNovoToolStripMenuItem.Text = "Dodaj novo";
             this.dodajNovoToolStripMenuItem.Click += new System.EventHandler(this.dodajNovoToolStripMenuItem_Click);
             // 
@@ -326,7 +326,7 @@
             // najčešćeBolestiToolStripMenuItem
             // 
             this.najčešćeBolestiToolStripMenuItem.Name = "najčešćeBolestiToolStripMenuItem";
-            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.najčešćeBolestiToolStripMenuItem.Text = "Najčešće bolesti";
             // 
             // oNamaToolStripMenuItem
