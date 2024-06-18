@@ -10,10 +10,10 @@ namespace PrirodnaLjekarnaa
     {
         public static string FilePath = "KorisniciLjekarne";
 
-        //public static string FilePath1 = "Cajevi.txt";
-        //public static string FilePath2 = "SokoviiSirupi.txt";
-        //public static string FilePath3 = "EtericnaUlja.txt";
-        //public static string FilePath4 = "KremeiMasti.txt";
+        public static string FilePath1 = "Cajevi.txt";
+        public static string FilePath2 = "SokoviiSirupi.txt";
+        public static string FilePath3 = "EtericnaUlja.txt";
+        public static string FilePath4 = "KremeiMasti.txt";
 
         public static string FilePath5 = "KupovinaJedanProizvod.txt";
         public static string FilePath6 = "DodavanjeUKosaricu.txt";

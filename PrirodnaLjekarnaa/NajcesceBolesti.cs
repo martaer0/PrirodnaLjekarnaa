@@ -102,8 +102,8 @@ namespace PrirodnaLjekarnaa
 
                 sw.Close();
 
-                Kupovina odvestKosarica = new Kupovina();
-                odvestKosarica.ShowDialog();
+                Kupovina odvestKupovina = new Kupovina();
+                odvestKupovina.ShowDialog();
                 this.Close();
             }
 
