@@ -63,6 +63,8 @@ namespace PrirodnaLjekarnaa
         private void Onama2_Closed(object sender, EventArgs e)
         {
             File.Delete(Admin.FilePath5);
+            File.Delete(Admin.FilePath7);
+            File.WriteAllText(Admin.FilePath6, "");
         }
     }
 }

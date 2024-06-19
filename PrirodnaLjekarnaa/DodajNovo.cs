@@ -154,7 +154,9 @@ namespace PrirodnaLjekarnaa
 
         private void DodajNovo_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            File.Delete(Admin.FilePath5);
+            File.Delete(Admin.FilePath7);
+            File.WriteAllText(Admin.FilePath6, "");
         }
     }
 }

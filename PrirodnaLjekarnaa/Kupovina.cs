@@ -37,34 +37,25 @@ namespace PrirodnaLjekarnaa
 
 
         //rastvaljanje svake linije u cilom fileu za kosaricu
-        public static void RastavljanjeSvLinije(int lNb, TextBox m, MaskedTextBox n)
-        {
+        //public static void RastavljanjeSvLinije(List<string> n)
+        //{
 
-            List<string> stringList = new List<string>();
-            using (StreamReader sr = new StreamReader("..\\..\\PotvrdenaKosarica.txt"))
-            {
-                string line = sr.ReadLine();
+        //    //List<string> stringList = new List<string>();
+        //    using (StreamReader sr = new StreamReader("..\\..\\PotvrdenaKosarica.txt"))
+        //    {
+        //        string line = sr.ReadLine();
 
-                while (line != null)
-                {
-                    stringList.Add(line);
-                    line = sr.ReadLine();
-                }
-            }
+        //        while (line != null)
+        //        {
+        //            n.Add(line);
+        //            line = sr.ReadLine();
+        //        }
+        //    }
 
-            if (lNb >= 1) {
-                if (stringList.Count > 0)
-                {
-
-                    string Line = stringList[lNb - 1];
-                    string[] linija1 = Line.Split('|');
-                    m.Text = linija1[0];
-                    n.Text = linija1[3];
-                }
-            }
             
             
-        }
+            
+        //}
 
 
         //samo kad je jedan proizvod odabran - razlog ovomu je da se moze odmah samo jedan proizvod uzest bez koraka za kosaricu
@@ -108,16 +99,87 @@ namespace PrirodnaLjekarnaa
         //cijela kosarica
         private void Kosarica_CheckedChanged(object sender, EventArgs e)
         {
-            int lNb1 = 1, lNb2 = 2, lNb3 = 3, lNb4 = 4, lNb5 = 5, lNb6 = 6, lNb7 = 7;
+            List<string> stringList = new List<string>();
 
 
-            RastavljanjeSvLinije(lNb1, textBox11, maskedTextBox16);
-            RastavljanjeSvLinije(lNb2, textBox2, maskedTextBox2);
-            RastavljanjeSvLinije(lNb3, textBox3, maskedTextBox3);
-            RastavljanjeSvLinije(lNb4, textBox4, maskedTextBox4);
-            RastavljanjeSvLinije(lNb5, textBox5, maskedTextBox5);
-            RastavljanjeSvLinije(lNb6, textBox7, maskedTextBox17);
-            RastavljanjeSvLinije(lNb7, textBox8, maskedTextBox18);
+            using (StreamReader sr = new StreamReader("..\\..\\PotvrdenaKosarica.txt"))
+            {
+                string line = sr.ReadLine();
+
+                while (line != null)
+                {
+                    stringList.Add(line);
+                    line = sr.ReadLine();
+                }
+            }
+
+
+            if (stringList.Count > 0)
+            {
+                //1.linija
+                string line1 = stringList[0];
+                string[] linija1 = line1.Split('|');
+                textBox11.Text = linija1[0];
+                maskedTextBox16.Text = linija1[3];
+
+                if (stringList.Count > 1)
+                {
+                    //2.linija
+                    string line2 = stringList[1];
+                    string[] linija2 = line2.Split('|');
+                    textBox2.Text = linija2[0];
+                    maskedTextBox2.Text = linija2[3];
+
+                    if (stringList.Count > 2)
+                    {
+                        //3.linija
+                        string line3 = stringList[2];
+                        string[] linija3 = line3.Split('|');
+                        textBox3.Text = linija3[0];
+                        maskedTextBox3.Text = linija3[3];
+
+                        if (stringList.Count > 3)
+                        {
+                            //4.linija
+                            string line4 = stringList[3];
+                            string[] linija4 = line4.Split('|');
+                            textBox4.Text = linija4[0];
+                            maskedTextBox4.Text = linija4[3];
+
+                            if (stringList.Count > 4)
+                            {
+                                //5.linija
+                                string line5 = stringList[4];
+                                string[] linija5 = line5.Split('|');
+                                textBox5.Text = linija5[0];
+                                maskedTextBox5.Text = linija5[3];
+
+                                if (stringList.Count > 5)
+                                {
+                                    //6.linija
+                                    string line6 = stringList[5];
+                                    string[] linija6 = line6.Split('|');
+                                    textBox7.Text = linija6[0];
+                                    maskedTextBox17.Text = linija6[3];
+
+                                    if (stringList.Count > 6)
+                                    {
+                                        //7.linija
+                                        string line7 = stringList[6];
+                                        string[] linija7 = line7.Split('|');
+                                        textBox8.Text = linija7[0];
+                                        maskedTextBox18.Text = linija7[3];
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
 
 
 
@@ -430,18 +492,22 @@ namespace PrirodnaLjekarnaa
 
         private void Kupovina_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            File.Delete(Admin.FilePath5);
+            File.Delete(Admin.FilePath7);
+            File.WriteAllText(Admin.FilePath6, "");
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             if(Kosarica.Checked == true)
             {
-                double ukcijena = double.Parse(maskedTextBox11.Text) + double.Parse(maskedTextBox11.Text) + double.Parse(maskedTextBox11.Text) + double.Parse(maskedTextBox11.Text) + double.Parse(maskedTextBox11.Text) + double.Parse(maskedTextBox11.Text) + double.Parse(maskedTextBox11.Text) + int.Parse(textBox6.Text);
+                //double ukcijena = double.Parse(maskedTextBox11.Text) + double.Parse(maskedTextBox12.Text) + double.Parse(maskedTextBox13.Text) + double.Parse(maskedTextBox14.Text) + double.Parse(maskedTextBox15.Text) + double.Parse(maskedTextBox25.Text) + double.Parse(maskedTextBox26.Text) + double.Parse(textBox6.Text);
+                double ukcijena = Convert.ToDouble(maskedTextBox11.Text) + Convert.ToDouble(maskedTextBox12.Text) + Convert.ToDouble(maskedTextBox13.Text) + Convert.ToDouble(maskedTextBox14.Text) + Convert.ToDouble(maskedTextBox15.Text) + Convert.ToDouble(maskedTextBox25.Text) + Convert.ToDouble(maskedTextBox26.Text);
+                double ukcijena1 = ukcijena + double.Parse(textBox6.Text);
 
-                textBox9.Text = ukcijena.ToString();
+                textBox9.Text = ukcijena1.ToString();
 
-                //Convert.ToDouble(maskedTextBox11.Text) + Convert.ToDouble(maskedTextBox11.Text) + Convert.ToDouble(maskedTextBox11.Text) + Convert.ToDouble(maskedTextBox11.Text) + Convert.ToDouble(maskedTextBox11.Text) + Convert.ToDouble(maskedTextBox11.Text) + Convert.ToDouble(maskedTextBox11.Text)
+                
             }
         }
     }
