@@ -6,9 +6,11 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace PrirodnaLjekarnaa
 {
@@ -23,15 +25,10 @@ namespace PrirodnaLjekarnaa
 
 
         //da ne moram pisat isto nonstop za racunanje konacne cijene 
-        public static double RacunanjeCijene(MaskedTextBox n, MaskedTextBox m, MaskedTextBox k)
-        {
-            int val = 1;
-            if (n.Text != "1")
-            {
-                val = int.Parse(n.Text);
-            }
+        public static double RacunanjeCijene(NumericUpDown n, MaskedTextBox m, MaskedTextBox k)
+        {                      
 
-            double cijena = double.Parse(m.Text) * val;
+            double cijena = double.Parse(m.Text) * Convert.ToInt32(n.Value);
             k.Text = cijena.ToString();
             return cijena;
         }
@@ -61,31 +58,63 @@ namespace PrirodnaLjekarnaa
         //samo kad je jedan proizvod odabran - razlog ovomu je da se moze odmah samo jedan proizvod uzest bez koraka za kosaricu
         private void JedanProizvod_CheckedChanged(object sender, EventArgs e)
         {
-            List<string> stringList = new List<string>();
-            StreamReader sr = new StreamReader("..\\..\\KupovinaJedanProizvod.txt");
-            string line = sr.ReadLine();
-            int val1 = 1;
+            //List<string> stringList = new List<string>();
+            //StreamReader sr = new StreamReader("..\\..\\KupovinaJedanProizvod.txt");
+            //string line = sr.ReadLine();
+            //int val1 = 1;
 
-            while (line != null)
-            {
-                stringList.Add(line);
-                line = sr.ReadLine();
-            }
+            //while (line != null)
+            //{
+            //    stringList.Add(line);
+            //    line = sr.ReadLine();
+
+            //}
+
+            //string[] linija1 = line.Split('|');
+            //textBox11.Text = linija1[0];
+            //maskedTextBox16.Text = linija1[1];      
+
             
-            string[] linija1 = line.Split('|');
-            textBox11.Text = linija1[0];
-            maskedTextBox16.Text = linija1[1];            
 
-            if (maskedTextBox6.Text != "1")
-            {                
-                val1 = int.Parse(maskedTextBox11.Text);
+            List<string> stringList = new List<string>();
+            using (StreamReader sr = new StreamReader("..\\..\\KupovinaJedanProizvod.txt"))
+            {
+                string line = sr.ReadLine();               
+
+                while (line != null)
+                {
+                    stringList.Add(line);
+                    line = sr.ReadLine();
+                }
             }
 
-            double cijena = double.Parse(maskedTextBox16.Text) * val1;
-            maskedTextBox11.Text = cijena.ToString();
+            // Check if the list contains any lines before accessing them
+            if (stringList.Count > 0)
+            {
+                // Get the first line (assuming the intention is to process the first line after reading all lines)
+                string firstLine = stringList[0];
+                string[] linija1 = firstLine.Split('|');
+                textBox11.Text = linija1[0];
+                maskedTextBox16.Text = linija1[1];
+            }
+            else
+            {
+                // Handle the case where the file is empty
+                textBox11.Text = "File is empty";
+                maskedTextBox16.Text = "File is empty";
+            }
 
+
+            
+            //if(numericUpDown1.ValueChanged += true)
+            //{
+
+            //}        
+            double cijena = double.Parse(maskedTextBox16.Text) * Convert.ToInt32(numericUpDown1.Value);
+            maskedTextBox11.Text = cijena.ToString();
             double ukcijena = cijena + int.Parse(textBox6.Text);
             textBox9.Text = ukcijena.ToString();
+            
 
             
         }
@@ -111,13 +140,13 @@ namespace PrirodnaLjekarnaa
                 
             }
 
-            double cijena1 = RacunanjeCijene(maskedTextBox6, maskedTextBox16, maskedTextBox11);
-            double cijena2 = RacunanjeCijene(maskedTextBox7, maskedTextBox2, maskedTextBox12);
-            double cijena3 = RacunanjeCijene(maskedTextBox8, maskedTextBox3, maskedTextBox13);
-            double cijena4 = RacunanjeCijene(maskedTextBox9, maskedTextBox4, maskedTextBox14);
-            double cijena5 = RacunanjeCijene(maskedTextBox10, maskedTextBox5, maskedTextBox15);
-            double cijena6 = RacunanjeCijene(maskedTextBox21, maskedTextBox17, maskedTextBox25);
-            double cijena7 = RacunanjeCijene(maskedTextBox22, maskedTextBox18, maskedTextBox26);
+            double cijena1 = RacunanjeCijene(numericUpDown1, maskedTextBox16, maskedTextBox11);
+            double cijena2 = RacunanjeCijene(numericUpDown2, maskedTextBox2, maskedTextBox12);
+            double cijena3 = RacunanjeCijene(numericUpDown3, maskedTextBox3, maskedTextBox13);
+            double cijena4 = RacunanjeCijene(numericUpDown4, maskedTextBox4, maskedTextBox14);
+            double cijena5 = RacunanjeCijene(numericUpDown5, maskedTextBox5, maskedTextBox15);
+            double cijena6 = RacunanjeCijene(numericUpDown6, maskedTextBox17, maskedTextBox25);
+            double cijena7 = RacunanjeCijene(numericUpDown7, maskedTextBox18, maskedTextBox26);
 
 
             double ukcijena = (cijena1 + cijena2 + cijena3 + cijena4 + cijena5 + cijena6 + cijena7) + int.Parse(textBox6.Text); 
@@ -127,11 +156,11 @@ namespace PrirodnaLjekarnaa
 
 
 
-        public static void BrisanjeLinije(TextBox a, MaskedTextBox b, MaskedTextBox c, MaskedTextBox d)
+        public static void BrisanjeLinije(TextBox a, MaskedTextBox b, NumericUpDown c, MaskedTextBox d)
         {
             a.Text = "";
             b.Text = "";
-            c.Text = "";
+            c.Value = 0;
             d.Text = "";           
 
         }
@@ -141,7 +170,7 @@ namespace PrirodnaLjekarnaa
         {
             if(JedanProizvod.Checked == true)
             {
-                BrisanjeLinije(textBox11, maskedTextBox16, maskedTextBox6, maskedTextBox11);
+                BrisanjeLinije(textBox11, maskedTextBox16, numericUpDown1, maskedTextBox11);
 
                 File.Delete(Admin.FilePath5);
 
@@ -149,7 +178,7 @@ namespace PrirodnaLjekarnaa
 
             if (Kosarica.Checked == true)
             {
-                BrisanjeLinije(textBox11, maskedTextBox16, maskedTextBox6, maskedTextBox11);
+                BrisanjeLinije(textBox11, maskedTextBox16, numericUpDown1, maskedTextBox11);
             }
 
         }
@@ -159,7 +188,7 @@ namespace PrirodnaLjekarnaa
         {
             if (Kosarica.Checked == true)
             {
-                BrisanjeLinije(textBox2, maskedTextBox2, maskedTextBox7, maskedTextBox12);
+                BrisanjeLinije(textBox2, maskedTextBox2, numericUpDown2, maskedTextBox12);
             }
         }
 
@@ -167,7 +196,7 @@ namespace PrirodnaLjekarnaa
         {
             if (Kosarica.Checked == true)
             {
-                BrisanjeLinije(textBox3, maskedTextBox3, maskedTextBox8, maskedTextBox13);
+                BrisanjeLinije(textBox3, maskedTextBox3, numericUpDown3, maskedTextBox13);
             }
         }
 
@@ -175,7 +204,7 @@ namespace PrirodnaLjekarnaa
         {
             if (Kosarica.Checked == true)
             {
-                BrisanjeLinije(textBox4, maskedTextBox4, maskedTextBox9, maskedTextBox14);
+                BrisanjeLinije(textBox4, maskedTextBox4, numericUpDown4, maskedTextBox14);
             }
         }
 
@@ -183,7 +212,7 @@ namespace PrirodnaLjekarnaa
         {
             if (Kosarica.Checked == true)
             {
-                BrisanjeLinije(textBox5, maskedTextBox5, maskedTextBox10, maskedTextBox15);
+                BrisanjeLinije(textBox5, maskedTextBox5, numericUpDown5, maskedTextBox15);
             }
         }
 
@@ -191,7 +220,7 @@ namespace PrirodnaLjekarnaa
         {
             if (Kosarica.Checked == true)
             {
-                BrisanjeLinije(textBox7, maskedTextBox17, maskedTextBox21, maskedTextBox25);
+                BrisanjeLinije(textBox7, maskedTextBox17, numericUpDown6, maskedTextBox25);
             }
         }
 
@@ -199,7 +228,7 @@ namespace PrirodnaLjekarnaa
         {
             if (Kosarica.Checked == true)
             {
-                BrisanjeLinije(textBox8, maskedTextBox18, maskedTextBox22, maskedTextBox26);
+                BrisanjeLinije(textBox8, maskedTextBox18, numericUpDown7, maskedTextBox26);
             }
         }
 
@@ -209,7 +238,7 @@ namespace PrirodnaLjekarnaa
         {
             if(JedanProizvod.Checked == true)
             {
-                BrisanjeLinije(textBox11, maskedTextBox16, maskedTextBox6, maskedTextBox11);
+                BrisanjeLinije(textBox11, maskedTextBox16, numericUpDown1, maskedTextBox11);
                 File.Delete(Admin.FilePath5);
 
             }
@@ -217,13 +246,13 @@ namespace PrirodnaLjekarnaa
 
             if (Kosarica.Checked == true)
             {
-                BrisanjeLinije(textBox11, maskedTextBox16, maskedTextBox6, maskedTextBox11);
-                BrisanjeLinije(textBox2, maskedTextBox2, maskedTextBox7, maskedTextBox12);
-                BrisanjeLinije(textBox3, maskedTextBox3, maskedTextBox8, maskedTextBox13);
-                BrisanjeLinije(textBox4, maskedTextBox4, maskedTextBox9, maskedTextBox14);
-                BrisanjeLinije(textBox5, maskedTextBox5, maskedTextBox10, maskedTextBox15);
-                BrisanjeLinije(textBox7, maskedTextBox17, maskedTextBox21, maskedTextBox25);
-                BrisanjeLinije(textBox8, maskedTextBox18, maskedTextBox22, maskedTextBox26);
+                BrisanjeLinije(textBox11, maskedTextBox16, numericUpDown1, maskedTextBox11);
+                BrisanjeLinije(textBox2, maskedTextBox2, numericUpDown2, maskedTextBox12);
+                BrisanjeLinije(textBox3, maskedTextBox3, numericUpDown3, maskedTextBox13);
+                BrisanjeLinije(textBox4, maskedTextBox4, numericUpDown4, maskedTextBox14);
+                BrisanjeLinije(textBox5, maskedTextBox5, numericUpDown5, maskedTextBox15);
+                BrisanjeLinije(textBox7, maskedTextBox17, numericUpDown6, maskedTextBox25);
+                BrisanjeLinije(textBox8, maskedTextBox18, numericUpDown7, maskedTextBox26);
                 File.Delete(Admin.FilePath7);
 
             }
@@ -250,8 +279,8 @@ namespace PrirodnaLjekarnaa
             {
                 if ((textBox11.Text != "" || textBox2.Text != "" || textBox3.Text != "" || textBox4.Text != "" || textBox5.Text != "" || textBox7.Text != "" || textBox8.Text != "") && textBox1.Text != "" && maskedTextBox1.Text != "")
                 {
-                    string dolazak = DateTime.Now.ToString() + 5;
-                    MessageBox.Show("Vaša kupnja je gotova. Očekivani dolazak pošiljke je {0}", dolazak);
+                   
+                    MessageBox.Show("Vaša kupnja je gotova. Očekivani dolazak pošiljke je 4.7.2024.");
 
                     File.Delete(Admin.FilePath5);
                     File.Delete(Admin.FilePath7);
@@ -278,9 +307,8 @@ namespace PrirodnaLjekarnaa
             if (JedanProizvod.Checked == true)
             {
                 if((textBox11.Text != "") && (textBox1.Text != "") && (maskedTextBox1.Text != ""))
-                {
-                    string dolazak = DateTime.Now.ToString() + 3;
-                    MessageBox.Show("Vaša kupnja je gotova. Očekivani dolazak pošiljke je {0}", dolazak);
+                {                    
+                    MessageBox.Show("Vaša kupnja je gotova. Očekivani dolazak pošiljke je 4.7.2024.");
 
                     File.Delete(Admin.FilePath7);
                     File.Delete(Admin.FilePath5);
@@ -305,7 +333,7 @@ namespace PrirodnaLjekarnaa
 
         }
 
-
+        
 
         private void naslovnicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -353,6 +381,63 @@ namespace PrirodnaLjekarnaa
             frmDodaj.ShowDialog();
             File.Delete(Admin.FilePath5);
             this.Close();
+        }
+
+
+
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            if(JedanProizvod.Checked == true)
+            {
+                double cijena = double.Parse(maskedTextBox16.Text) * Convert.ToInt32(numericUpDown1.Value);
+                maskedTextBox11.Text = cijena.ToString();
+                double ukcijena = cijena + int.Parse(textBox6.Text);
+                textBox9.Text = ukcijena.ToString();
+            }
+
+            if(Kosarica.Checked == true)
+            {
+                double cijena = double.Parse(maskedTextBox16.Text) * Convert.ToInt32(numericUpDown1.Value);
+                maskedTextBox11.Text = cijena.ToString();
+            }
+            
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            double cijena = double.Parse(maskedTextBox16.Text) * Convert.ToInt32(numericUpDown1.Value);
+            maskedTextBox11.Text = cijena.ToString();
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            double cijena = double.Parse(maskedTextBox16.Text) * Convert.ToInt32(numericUpDown1.Value);
+            maskedTextBox11.Text = cijena.ToString();
+        }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+            double cijena = double.Parse(maskedTextBox16.Text) * Convert.ToInt32(numericUpDown1.Value);
+            maskedTextBox11.Text = cijena.ToString();
+        }
+
+        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
+        {
+            double cijena = double.Parse(maskedTextBox16.Text) * Convert.ToInt32(numericUpDown1.Value);
+            maskedTextBox11.Text = cijena.ToString();
+        }
+
+        private void numericUpDown6_ValueChanged(object sender, EventArgs e)
+        {
+            double cijena = double.Parse(maskedTextBox16.Text) * Convert.ToInt32(numericUpDown1.Value);
+            maskedTextBox11.Text = cijena.ToString();
+        }
+
+        private void numericUpDown7_ValueChanged(object sender, EventArgs e)
+        {
+            double cijena = double.Parse(maskedTextBox16.Text) * Convert.ToInt32(numericUpDown1.Value);
+            maskedTextBox11.Text = cijena.ToString();
         }
     }
 }

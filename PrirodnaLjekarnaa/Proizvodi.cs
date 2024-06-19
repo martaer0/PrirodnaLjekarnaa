@@ -91,9 +91,9 @@ namespace PrirodnaLjekarnaa
             textBox4.Text = linija[2];
             textBox1.Text = linija[3];
 
-            // slike
+            //slike
 
-            if(cajevi.Checked == true)
+            if (cajevi.Checked == true)
             {
                 pictureBox1.Load("..\\..\\slike\\cajevi.jpeg");
             }

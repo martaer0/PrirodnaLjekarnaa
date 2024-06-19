@@ -54,7 +54,6 @@ namespace PrirodnaLjekarnaa
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.menuStrip1.Enabled = false;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.naslovnicaToolStripMenuItem,
@@ -199,15 +198,13 @@ namespace PrirodnaLjekarnaa
             this.Controls.Add(this.menuStrip1);
             this.Name = "Onama2";
             this.Text = "Onama2";
-            
+            this.Closed += new System.EventHandler(this.Onama2_Closed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
-            this.Closed += new EventHandler(Onama2_Closed);
 
         }
 

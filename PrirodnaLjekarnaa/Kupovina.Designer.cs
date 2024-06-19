@@ -34,8 +34,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.maskedTextBox26 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox25 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox22 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox21 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox18 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox17 = new System.Windows.Forms.MaskedTextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -49,11 +47,6 @@
             this.maskedTextBox13 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox12 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox11 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox10 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox9 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
@@ -92,18 +85,37 @@
             this.doktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.numericUpDown7);
+            this.groupBox2.Controls.Add(this.numericUpDown6);
+            this.groupBox2.Controls.Add(this.numericUpDown5);
+            this.groupBox2.Controls.Add(this.numericUpDown4);
+            this.groupBox2.Controls.Add(this.numericUpDown3);
+            this.groupBox2.Controls.Add(this.numericUpDown2);
+            this.groupBox2.Controls.Add(this.numericUpDown1);
             this.groupBox2.Controls.Add(this.button10);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.maskedTextBox26);
             this.groupBox2.Controls.Add(this.maskedTextBox25);
-            this.groupBox2.Controls.Add(this.maskedTextBox22);
-            this.groupBox2.Controls.Add(this.maskedTextBox21);
             this.groupBox2.Controls.Add(this.maskedTextBox18);
             this.groupBox2.Controls.Add(this.maskedTextBox17);
             this.groupBox2.Controls.Add(this.textBox8);
@@ -117,11 +129,6 @@
             this.groupBox2.Controls.Add(this.maskedTextBox13);
             this.groupBox2.Controls.Add(this.maskedTextBox12);
             this.groupBox2.Controls.Add(this.maskedTextBox11);
-            this.groupBox2.Controls.Add(this.maskedTextBox10);
-            this.groupBox2.Controls.Add(this.maskedTextBox9);
-            this.groupBox2.Controls.Add(this.maskedTextBox8);
-            this.groupBox2.Controls.Add(this.maskedTextBox7);
-            this.groupBox2.Controls.Add(this.maskedTextBox6);
             this.groupBox2.Controls.Add(this.maskedTextBox5);
             this.groupBox2.Controls.Add(this.maskedTextBox4);
             this.groupBox2.Controls.Add(this.maskedTextBox3);
@@ -172,7 +179,6 @@
             // 
             this.maskedTextBox26.Location = new System.Drawing.Point(345, 235);
             this.maskedTextBox26.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox26.Mask = "0.00";
             this.maskedTextBox26.Name = "maskedTextBox26";
             this.maskedTextBox26.Size = new System.Drawing.Size(63, 22);
             this.maskedTextBox26.TabIndex = 79;
@@ -181,28 +187,9 @@
             // 
             this.maskedTextBox25.Location = new System.Drawing.Point(345, 205);
             this.maskedTextBox25.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox25.Mask = "0.00";
             this.maskedTextBox25.Name = "maskedTextBox25";
             this.maskedTextBox25.Size = new System.Drawing.Size(63, 22);
             this.maskedTextBox25.TabIndex = 78;
-            // 
-            // maskedTextBox22
-            // 
-            this.maskedTextBox22.Location = new System.Drawing.Point(259, 235);
-            this.maskedTextBox22.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox22.Mask = "1";
-            this.maskedTextBox22.Name = "maskedTextBox22";
-            this.maskedTextBox22.Size = new System.Drawing.Size(65, 22);
-            this.maskedTextBox22.TabIndex = 75;
-            // 
-            // maskedTextBox21
-            // 
-            this.maskedTextBox21.Location = new System.Drawing.Point(259, 205);
-            this.maskedTextBox21.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox21.Mask = "1";
-            this.maskedTextBox21.Name = "maskedTextBox21";
-            this.maskedTextBox21.Size = new System.Drawing.Size(65, 22);
-            this.maskedTextBox21.TabIndex = 74;
             // 
             // maskedTextBox18
             // 
@@ -284,7 +271,6 @@
             // 
             this.maskedTextBox15.Location = new System.Drawing.Point(345, 175);
             this.maskedTextBox15.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox15.Mask = "0.00";
             this.maskedTextBox15.Name = "maskedTextBox15";
             this.maskedTextBox15.Size = new System.Drawing.Size(63, 22);
             this.maskedTextBox15.TabIndex = 61;
@@ -293,7 +279,6 @@
             // 
             this.maskedTextBox14.Location = new System.Drawing.Point(345, 145);
             this.maskedTextBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox14.Mask = "0.00";
             this.maskedTextBox14.Name = "maskedTextBox14";
             this.maskedTextBox14.Size = new System.Drawing.Size(63, 22);
             this.maskedTextBox14.TabIndex = 60;
@@ -302,7 +287,6 @@
             // 
             this.maskedTextBox13.Location = new System.Drawing.Point(345, 115);
             this.maskedTextBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox13.Mask = "0.00";
             this.maskedTextBox13.Name = "maskedTextBox13";
             this.maskedTextBox13.Size = new System.Drawing.Size(63, 22);
             this.maskedTextBox13.TabIndex = 59;
@@ -311,7 +295,6 @@
             // 
             this.maskedTextBox12.Location = new System.Drawing.Point(345, 85);
             this.maskedTextBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox12.Mask = "0.00";
             this.maskedTextBox12.Name = "maskedTextBox12";
             this.maskedTextBox12.Size = new System.Drawing.Size(63, 22);
             this.maskedTextBox12.TabIndex = 58;
@@ -320,55 +303,9 @@
             // 
             this.maskedTextBox11.Location = new System.Drawing.Point(345, 55);
             this.maskedTextBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox11.Mask = "0.00";
             this.maskedTextBox11.Name = "maskedTextBox11";
             this.maskedTextBox11.Size = new System.Drawing.Size(63, 22);
             this.maskedTextBox11.TabIndex = 57;
-            // 
-            // maskedTextBox10
-            // 
-            this.maskedTextBox10.Location = new System.Drawing.Point(259, 175);
-            this.maskedTextBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox10.Mask = "1";
-            this.maskedTextBox10.Name = "maskedTextBox10";
-            this.maskedTextBox10.Size = new System.Drawing.Size(65, 22);
-            this.maskedTextBox10.TabIndex = 56;
-            // 
-            // maskedTextBox9
-            // 
-            this.maskedTextBox9.Location = new System.Drawing.Point(259, 145);
-            this.maskedTextBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox9.Mask = "1";
-            this.maskedTextBox9.Name = "maskedTextBox9";
-            this.maskedTextBox9.Size = new System.Drawing.Size(65, 22);
-            this.maskedTextBox9.TabIndex = 55;
-            // 
-            // maskedTextBox8
-            // 
-            this.maskedTextBox8.Location = new System.Drawing.Point(259, 115);
-            this.maskedTextBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox8.Mask = "1";
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(65, 22);
-            this.maskedTextBox8.TabIndex = 54;
-            // 
-            // maskedTextBox7
-            // 
-            this.maskedTextBox7.Location = new System.Drawing.Point(259, 85);
-            this.maskedTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox7.Mask = "1";
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(65, 22);
-            this.maskedTextBox7.TabIndex = 53;
-            // 
-            // maskedTextBox6
-            // 
-            this.maskedTextBox6.Location = new System.Drawing.Point(259, 55);
-            this.maskedTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox6.Mask = "1";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(65, 22);
-            this.maskedTextBox6.TabIndex = 52;
             // 
             // maskedTextBox5
             // 
@@ -594,7 +531,7 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(580, 128);
-            this.maskedTextBox1.Mask = "__________";
+            this.maskedTextBox1.Mask = "0000000000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(183, 22);
             this.maskedTextBox1.TabIndex = 26;
@@ -624,7 +561,6 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.menuStrip1.Enabled = false;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.naslovnicaToolStripMenuItem,
@@ -659,27 +595,27 @@
             // proizvodiToolStripMenuItem1
             // 
             this.proizvodiToolStripMenuItem1.Name = "proizvodiToolStripMenuItem1";
-            this.proizvodiToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.proizvodiToolStripMenuItem1.Size = new System.Drawing.Size(170, 26);
             this.proizvodiToolStripMenuItem1.Text = "Proizvodi";
             this.proizvodiToolStripMenuItem1.Click += new System.EventHandler(this.proizvodiToolStripMenuItem1_Click);
             // 
             // košaricaToolStripMenuItem
             // 
             this.košaricaToolStripMenuItem.Name = "košaricaToolStripMenuItem";
-            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.košaricaToolStripMenuItem.Text = "Košarica";
             this.košaricaToolStripMenuItem.Click += new System.EventHandler(this.košaricaToolStripMenuItem_Click);
             // 
             // kupiToolStripMenuItem
             // 
             this.kupiToolStripMenuItem.Name = "kupiToolStripMenuItem";
-            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.kupiToolStripMenuItem.Text = "Kupi";
             // 
             // dodajNovoToolStripMenuItem
             // 
             this.dodajNovoToolStripMenuItem.Name = "dodajNovoToolStripMenuItem";
-            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.dodajNovoToolStripMenuItem.Text = "Dodaj novo";
             this.dodajNovoToolStripMenuItem.Click += new System.EventHandler(this.dodajNovoToolStripMenuItem_Click);
             // 
@@ -694,7 +630,7 @@
             // najčešćeBolestiToolStripMenuItem
             // 
             this.najčešćeBolestiToolStripMenuItem.Name = "najčešćeBolestiToolStripMenuItem";
-            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.najčešćeBolestiToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.najčešćeBolestiToolStripMenuItem.Text = "Najčešće bolesti";
             this.najčešćeBolestiToolStripMenuItem.Click += new System.EventHandler(this.najčešćeBolestiToolStripMenuItem_Click);
             // 
@@ -704,6 +640,62 @@
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.oNamaToolStripMenuItem.Text = "O nama";
             this.oNamaToolStripMenuItem.Click += new System.EventHandler(this.oNamaToolStripMenuItem_Click);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(259, 57);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(51, 22);
+            this.numericUpDown1.TabIndex = 82;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(259, 86);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(51, 22);
+            this.numericUpDown2.TabIndex = 83;
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(259, 117);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(51, 22);
+            this.numericUpDown3.TabIndex = 84;
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(259, 145);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(51, 22);
+            this.numericUpDown4.TabIndex = 85;
+            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(259, 175);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(51, 22);
+            this.numericUpDown5.TabIndex = 86;
+            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.Location = new System.Drawing.Point(259, 205);
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(51, 22);
+            this.numericUpDown6.TabIndex = 87;
+            this.numericUpDown6.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
+            // 
+            // numericUpDown7
+            // 
+            this.numericUpDown7.Location = new System.Drawing.Point(259, 235);
+            this.numericUpDown7.Name = "numericUpDown7";
+            this.numericUpDown7.Size = new System.Drawing.Size(51, 22);
+            this.numericUpDown7.TabIndex = 88;
+            this.numericUpDown7.ValueChanged += new System.EventHandler(this.numericUpDown7_ValueChanged);
             // 
             // Kupovina
             // 
@@ -732,6 +724,13 @@
             this.groupBox2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -744,8 +743,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox26;
         private System.Windows.Forms.MaskedTextBox maskedTextBox25;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox22;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox21;
         private System.Windows.Forms.MaskedTextBox maskedTextBox18;
         private System.Windows.Forms.MaskedTextBox maskedTextBox17;
         private System.Windows.Forms.TextBox textBox8;
@@ -759,11 +756,6 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox13;
         private System.Windows.Forms.MaskedTextBox maskedTextBox12;
         private System.Windows.Forms.MaskedTextBox maskedTextBox11;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox10;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox9;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
         private System.Windows.Forms.MaskedTextBox maskedTextBox5;
         private System.Windows.Forms.MaskedTextBox maskedTextBox4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
@@ -802,5 +794,12 @@
         private System.Windows.Forms.ToolStripMenuItem doktorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem najčešćeBolestiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

@@ -32,6 +32,7 @@ namespace PrirodnaLjekarnaa
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proizvodi));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@ namespace PrirodnaLjekarnaa
             this.doktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -86,6 +86,15 @@ namespace PrirodnaLjekarnaa
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 388);
             this.panel1.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(319, 358);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 14);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "*za samo 1 proizvod";
             // 
             // textBox1
             // 
@@ -188,7 +197,8 @@ namespace PrirodnaLjekarnaa
             // 
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 248);
+            this.pictureBox1.Size = new System.Drawing.Size(187, 187);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -200,6 +210,7 @@ namespace PrirodnaLjekarnaa
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(275, 292);
             this.listBox1.TabIndex = 7;
+            this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
             // 
             // groupBox1
             // 
@@ -266,7 +277,6 @@ namespace PrirodnaLjekarnaa
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.menuStrip1.Enabled = false;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.naslovnicaToolStripMenuItem,
@@ -347,15 +357,6 @@ namespace PrirodnaLjekarnaa
             this.oNamaToolStripMenuItem.Text = "O nama";
             this.oNamaToolStripMenuItem.Click += new System.EventHandler(this.oNamaToolStripMenuItem_Click);
             // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(319, 358);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 14);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "*za samo 1 proizvod";
-            // 
             // Proizvodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -377,7 +378,6 @@ namespace PrirodnaLjekarnaa
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-            
 
         }
 

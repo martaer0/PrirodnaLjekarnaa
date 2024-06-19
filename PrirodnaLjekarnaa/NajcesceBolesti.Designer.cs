@@ -79,7 +79,7 @@
             this.lbxListaBolesti.Items.AddRange(new object[] {
             "Glavobolja",
             "Mučnina",
-            "Žgaravica"});
+            "Grlobolja i kašalj"});
             this.lbxListaBolesti.Location = new System.Drawing.Point(19, 121);
             this.lbxListaBolesti.Name = "lbxListaBolesti";
             this.lbxListaBolesti.Size = new System.Drawing.Size(347, 148);
@@ -255,7 +255,6 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.menuStrip1.Enabled = false;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.naslovnicaToolStripMenuItem,

@@ -54,19 +54,19 @@ namespace PrirodnaLjekarnaa
                 sr.Close();
             }
 
-            if (lbxListaBolesti.SelectedItem.ToString() == "Žgaravica")
+            if (lbxListaBolesti.SelectedItem.ToString() == "Grlobolja i kašalj")
             {
-                StreamReader sr = new StreamReader("..\\..\\LjekoviZgaravica");
+                StreamReader sr = new StreamReader("..\\..\\LjekoviGrloboljaiKasalj");
                 string line = sr.ReadLine();
-                List<string> LjekoviZgaravica = new List<string>();
+                List<string> LjekoviGrloboljaiKasalj = new List<string>();
 
                 while (line != null)
                 {
-                    LjekoviZgaravica.Add(line);
+                    LjekoviGrloboljaiKasalj.Add(line);
                     line = sr.ReadLine();
                 }
 
-                lbxPreporuceniProizvodi.DataSource = LjekoviZgaravica;
+                lbxPreporuceniProizvodi.DataSource = LjekoviGrloboljaiKasalj;
                 sr.Close();
             }
         }
