@@ -33,52 +33,60 @@ namespace PrirodnaLjekarnaa
             }
 
 
-            if (rbCajevi.Checked)
+            if (rbCajevi.Checked && (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != ""))
             {
-                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
-                File.AppendAllText("..\\..\\Cajevi.txt", Environment.NewLine + linija);
+                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena + "\n";
+                File.AppendAllText("..\\..\\Cajevi.txt", linija);
 
                 tbimeProizvoda.Text = "";
                 tbLjekovitaSvojstva.Text = "";
                 tbOpis.Text = "";
                 tbCijena.Text = "";
+
+                MessageBox.Show("Uspješno unesen novi proizvod.");
                 
             }
 
 
-            else if (rbSokoviSirupi.Checked)
+            else if (rbSokoviSirupi.Checked && (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != ""))
             {
-                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
-                File.AppendAllText("..\\..\\SokoviiSirupi.txt", Environment.NewLine + linija);
+                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena + "\n";
+                File.AppendAllText("..\\..\\SokoviiSirupi.txt", linija);
 
                 tbimeProizvoda.Text = "";
                 tbLjekovitaSvojstva.Text = "";
                 tbOpis.Text = "";
                 tbCijena.Text = "";
+
+                MessageBox.Show("Uspješno unesen novi proizvod.");
             }
 
 
-            else if (rbEtericnaUlja.Checked)
+            else if (rbEtericnaUlja.Checked && (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != ""))
             {
-                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
-                File.AppendAllText("..\\..\\EtericnaUlja.txt", Environment.NewLine + linija);
+                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena + "\n";
+                File.AppendAllText("..\\..\\EtericnaUlja.txt", linija);
 
                 tbimeProizvoda.Text = "";
                 tbLjekovitaSvojstva.Text = "";
                 tbOpis.Text = "";
                 tbCijena.Text = "";
+
+                MessageBox.Show("Uspješno unesen novi proizvod.");
             }
 
 
-            else if (rbKremeMasti.Checked)
+            else if (rbKremeMasti.Checked && (ImeProizvoda != "" && LjekovitaSvojstva != "" && Opis != "" && Cijena != ""))
             {
-                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
-                File.AppendAllText("..\\..\\KremeiMasti.txt", Environment.NewLine + linija);
+                string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena + "\n";
+                File.AppendAllText("..\\..\\KremeiMasti.txt", linija);
 
                 tbimeProizvoda.Text = "";
                 tbLjekovitaSvojstva.Text = "";
                 tbOpis.Text = "";
                 tbCijena.Text = "";
+
+                MessageBox.Show("Uspješno unesen novi proizvod.");
 
             }
 

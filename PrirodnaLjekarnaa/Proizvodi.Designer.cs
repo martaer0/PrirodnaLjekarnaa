@@ -32,6 +32,7 @@ namespace PrirodnaLjekarnaa
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proizvodi));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@ namespace PrirodnaLjekarnaa
             this.doktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -88,6 +88,15 @@ namespace PrirodnaLjekarnaa
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 388);
             this.panel1.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(196, 224);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 16);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "(u eurima)";
             // 
             // label5
             // 
@@ -313,29 +322,29 @@ namespace PrirodnaLjekarnaa
             // proizvodiToolStripMenuItem1
             // 
             this.proizvodiToolStripMenuItem1.Name = "proizvodiToolStripMenuItem1";
-            this.proizvodiToolStripMenuItem1.Size = new System.Drawing.Size(170, 26);
+            this.proizvodiToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.proizvodiToolStripMenuItem1.Text = "Proizvodi";
             // 
             // košaricaToolStripMenuItem
             // 
             this.košaricaToolStripMenuItem.Name = "košaricaToolStripMenuItem";
-            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.košaricaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.košaricaToolStripMenuItem.Text = "Košarica";
             this.košaricaToolStripMenuItem.Click += new System.EventHandler(this.košaricaToolStripMenuItem_Click);
             // 
             // kupiToolStripMenuItem
             // 
             this.kupiToolStripMenuItem.Name = "kupiToolStripMenuItem";
-            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.kupiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.kupiToolStripMenuItem.Text = "Kupi";
             this.kupiToolStripMenuItem.Click += new System.EventHandler(this.kupiToolStripMenuItem_Click);
             // 
             // dodajNovoToolStripMenuItem
             // 
+            this.dodajNovoToolStripMenuItem.Enabled = false;
             this.dodajNovoToolStripMenuItem.Name = "dodajNovoToolStripMenuItem";
-            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.dodajNovoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dodajNovoToolStripMenuItem.Text = "Dodaj novo";
-            this.dodajNovoToolStripMenuItem.Click += new System.EventHandler(this.dodajNovoToolStripMenuItem_Click);
             // 
             // doktorToolStripMenuItem
             // 
@@ -358,15 +367,6 @@ namespace PrirodnaLjekarnaa
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.oNamaToolStripMenuItem.Text = "O nama";
             this.oNamaToolStripMenuItem.Click += new System.EventHandler(this.oNamaToolStripMenuItem_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(196, 224);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 16);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "(u eurima)";
             // 
             // Proizvodi
             // 

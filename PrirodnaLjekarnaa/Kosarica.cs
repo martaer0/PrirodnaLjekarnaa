@@ -20,32 +20,39 @@ namespace PrirodnaLjekarnaa
             InitializeComponent();
         }
 
+        private BindingList<string> proizvodi;
         private void Kosarica_Load(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("..\\..\\DodavanjeUKosaricu.txt");
-            StreamReader sr1 = new StreamReader("..\\..\\DodavanjeUKosaricuPrekoBolesti.txt");
-            string line = sr.ReadLine();
-            string line1 = sr.ReadLine();
-
-            List<string> ProizvodiKosarica = new List<string>();
-
-            while (line != null)
+            proizvodi = new BindingList<string>();
+            using (StreamReader reader = new StreamReader(Admin.FilePath6))
             {
-                ProizvodiKosarica.Add(line);
-                line = sr.ReadLine();
-            }
-
-            while (line1 != null)
-            {
-                ProizvodiKosarica.Add(line1);
-                line1 = sr1.ReadLine();
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    proizvodi.Add(line);
+                }
             }
 
 
+            lbxProizvodiKosarica.DataSource = proizvodi;
 
-            lbxProizvodiKosarica.DataSource = ProizvodiKosarica;
-            sr.Close();
+
+
         }
+
+        private void btnObrisiProizvod_Click(object sender, EventArgs e)
+        {
+            if (lbxProizvodiKosarica.SelectedItem != null)
+            {
+                proizvodi.Remove((string)lbxProizvodiKosarica.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Proizvod nije odabran, odaberite proizvod koji želite izbrisati!");
+            }
+        }
+
+
 
         private void btnVodiNaKupovinu_Click(object sender, EventArgs e)
         {
@@ -53,38 +60,35 @@ namespace PrirodnaLjekarnaa
             Kupovina odvestKupovina = new Kupovina();
             odvestKupovina.ShowDialog();
             }
-        }
+        }   
+         
 
-        private void btnObrisiProizvod_Click(object sender, EventArgs e)
-        {
-            if (lbxProizvodiKosarica.SelectedIndex == -1)
-            {
-                MessageBox.Show("Nije odabran proizvod. Odaberite proizvod koji želite izbrisati!");
-            }
-            else
-            {
-                lbxProizvodiKosarica.Items.Remove(lbxProizvodiKosarica.SelectedItem);
-            }
-        }
 
         private void btnPotvrdi_Click(object sender, EventArgs e)
         {
-            List<string> stringPotvrdeniProizvodi = new List<string>();
-            StreamWriter sw = new StreamWriter(Admin.FilePath7, true);
-
-            foreach (var item in lbxProizvodiKosarica.Items)
+            if (lbxProizvodiKosarica.Items.Count != 0)
             {
-                sw.WriteLine(item.ToString());
+                List<string> stringPotvrdeniProizvodi = new List<string>();
+                StreamWriter sw = new StreamWriter(Admin.FilePath7, true);
+
+                foreach (var item in lbxProizvodiKosarica.Items)
+                {
+                    sw.WriteLine(item.ToString());
+                }
+
+                sw.Close();
+
+
+                File.WriteAllText(Admin.FilePath6, "");
+
+                MessageBox.Show("Uspješno potvrđen sadržaj košarice!");
+                gbProizvodiKosarica.Enabled = false;
+                btnObrisiProizvod.Enabled = false;
             }
 
-            sw.Close();
+            else MessageBox.Show("Košarica je prazna, dodajte proizvode u košaricu.");
+            
 
-            File.Delete(Admin.FilePath6);
-            File.Delete(Admin.FilePath6_1);
-
-
-            MessageBox.Show("Uspješno potvrđen sadržaj košarice!");
-            gbProizvodiKosarica.Enabled = false;
         }
 
 

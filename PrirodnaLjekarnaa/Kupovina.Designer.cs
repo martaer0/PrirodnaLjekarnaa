@@ -92,6 +92,7 @@
             this.doktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button11 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
@@ -523,7 +524,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(577, 298);
+            this.label9.Location = new System.Drawing.Point(579, 263);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 36);
             this.label9.TabIndex = 19;
@@ -626,14 +627,14 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // naslovnicaToolStripMenuItem
             // 
             this.naslovnicaToolStripMenuItem.Name = "naslovnicaToolStripMenuItem";
-            this.naslovnicaToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
+            this.naslovnicaToolStripMenuItem.Size = new System.Drawing.Size(95, 26);
             this.naslovnicaToolStripMenuItem.Text = "Naslovnica";
             this.naslovnicaToolStripMenuItem.Click += new System.EventHandler(this.naslovnicaToolStripMenuItem_Click);
             // 
@@ -645,7 +646,7 @@
             this.kupiToolStripMenuItem,
             this.dodajNovoToolStripMenuItem});
             this.proizvodiToolStripMenuItem.Name = "proizvodiToolStripMenuItem";
-            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
             this.proizvodiToolStripMenuItem.Text = "Ljekarna";
             // 
             // proizvodiToolStripMenuItem1
@@ -680,7 +681,7 @@
             this.doktorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.najčešćeBolestiToolStripMenuItem});
             this.doktorToolStripMenuItem.Name = "doktorToolStripMenuItem";
-            this.doktorToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.doktorToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
             this.doktorToolStripMenuItem.Text = "Doktor";
             // 
             // najčešćeBolestiToolStripMenuItem
@@ -693,9 +694,20 @@
             // oNamaToolStripMenuItem
             // 
             this.oNamaToolStripMenuItem.Name = "oNamaToolStripMenuItem";
-            this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
             this.oNamaToolStripMenuItem.Text = "O nama";
             this.oNamaToolStripMenuItem.Click += new System.EventHandler(this.oNamaToolStripMenuItem_Click);
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button11.Location = new System.Drawing.Point(579, 308);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(111, 23);
+            this.button11.TabIndex = 30;
+            this.button11.Text = "Ukupna cijena!";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // Kupovina
             // 
@@ -703,6 +715,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Kosarica);
             this.Controls.Add(this.JedanProizvod);
@@ -802,5 +815,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button11;
     }
 }

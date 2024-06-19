@@ -221,12 +221,7 @@ namespace PrirodnaLjekarnaa
             this.Close();
         }
 
-        private void dodajNovoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DodajNovo frmDodaj = new DodajNovo();
-            frmDodaj.ShowDialog();
-            this.Close();
-        }
+        
 
         private void najčešćeBolestiToolStripMenuItem_Click(object sender, EventArgs e)
         {

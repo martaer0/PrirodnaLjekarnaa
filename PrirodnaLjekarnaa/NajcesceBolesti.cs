@@ -24,7 +24,7 @@ namespace PrirodnaLjekarnaa
 
             if (lbxListaBolesti.SelectedItem.ToString() == "Glavobolja")
             {
-                StreamReader sr = new StreamReader("..\\..\\LjekoviGlavobolja");
+                StreamReader sr = new StreamReader("..\\..\\LjekoviGlavobolja.txt");
                 string line = sr.ReadLine();
                 List<string> LjekoviGlavobolja = new List<string>();
 
@@ -40,7 +40,7 @@ namespace PrirodnaLjekarnaa
 
             if (lbxListaBolesti.SelectedItem.ToString() == "Mučnina")
             {
-                StreamReader sr = new StreamReader("..\\..\\LjekoviMucnina");
+                StreamReader sr = new StreamReader("..\\..\\LjekoviMucnina.txt");
                 string line = sr.ReadLine();
                 List<string> LjekoviMucnina = new List<string>();
 
@@ -56,7 +56,7 @@ namespace PrirodnaLjekarnaa
 
             if (lbxListaBolesti.SelectedItem.ToString() == "Grlobolja i kašalj")
             {
-                StreamReader sr = new StreamReader("..\\..\\LjekoviGrloboljaiKasalj");
+                StreamReader sr = new StreamReader("..\\..\\LjekoviGrloboljaiKasalj.txt");
                 string line = sr.ReadLine();
                 List<string> LjekoviGrloboljaiKasalj = new List<string>();
 
@@ -123,7 +123,7 @@ namespace PrirodnaLjekarnaa
             string linija4 = tbCijena.Text;
 
             
-            StreamWriter sw = new StreamWriter(Admin.FilePath6_1, true);
+            StreamWriter sw = new StreamWriter(Admin.FilePath6, true);
             if (lbxPreporuceniProizvodi.SelectedIndex != -1)
             {
                 sw.WriteLine("{0}|{1}|{2}|{3}", linija1, linija2, linija3, linija4);
