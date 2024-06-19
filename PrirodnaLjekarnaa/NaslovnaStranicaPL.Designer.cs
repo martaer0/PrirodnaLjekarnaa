@@ -56,6 +56,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.Enabled = false;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.naslovnicaToolStripMenuItem,
@@ -249,6 +250,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NaslovnaStranicaPL";
             this.Text = "Naslovnica";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NaslovnaStranicaPL_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.gbPrijava.ResumeLayout(false);

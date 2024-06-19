@@ -58,6 +58,7 @@
             this.doktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label11 = new System.Windows.Forms.Label();
             this.gbOdabraniProizvod.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +119,7 @@
             // 
             // gbOdabraniProizvod
             // 
+            this.gbOdabraniProizvod.Controls.Add(this.label11);
             this.gbOdabraniProizvod.Controls.Add(this.tbCijena);
             this.gbOdabraniProizvod.Controls.Add(this.label9);
             this.gbOdabraniProizvod.Controls.Add(this.tbOpis);
@@ -335,6 +337,15 @@
             this.oNamaToolStripMenuItem.Text = "O nama";
             this.oNamaToolStripMenuItem.Click += new System.EventHandler(this.oNamaToolStripMenuItem_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(229, 266);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 16);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "(u eurima)";
+            // 
             // NajcesceBolesti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -355,6 +366,7 @@
             this.Controls.Add(this.label1);
             this.Name = "NajcesceBolesti";
             this.Text = "Najčešće bolesti";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NajcesceBolesti_FormClosed);
             this.gbOdabraniProizvod.ResumeLayout(false);
             this.gbOdabraniProizvod.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -395,5 +407,6 @@
         private System.Windows.Forms.ToolStripMenuItem doktorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem najčešćeBolestiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
+        private System.Windows.Forms.Label label11;
     }
 }

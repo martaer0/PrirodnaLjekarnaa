@@ -439,5 +439,10 @@ namespace PrirodnaLjekarnaa
             double cijena = double.Parse(maskedTextBox16.Text) * Convert.ToInt32(numericUpDown1.Value);
             maskedTextBox11.Text = cijena.ToString();
         }
+
+        private void Kupovina_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

@@ -131,5 +131,10 @@ namespace PrirodnaLjekarnaa
             frmDodaj.ShowDialog();
             this.Close();
         }
+
+        private void Kosarica_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

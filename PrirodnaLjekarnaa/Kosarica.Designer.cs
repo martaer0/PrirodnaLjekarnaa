@@ -254,6 +254,7 @@
             this.Controls.Add(this.gbProizvodiKosarica);
             this.Name = "Kosarica";
             this.Text = "Košarica";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Kosarica_FormClosed);
             this.Load += new System.EventHandler(this.Kosarica_Load);
             this.gbProizvodiKosarica.ResumeLayout(false);
             this.gbProizvodiKosarica.PerformLayout();

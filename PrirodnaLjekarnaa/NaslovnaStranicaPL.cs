@@ -104,13 +104,12 @@ namespace PrirodnaLjekarnaa
 
                 if (PronadenKorisnik)
                 {
-                    MessageBox.Show("Uspješna prijava! Idite dalje na proizvode!");
+                    MessageBox.Show("Uspješna prijava! Idite dalje!");
                     gbPrijava.Visible = false;
                     menuStrip1.Enabled = true;
                     buttonPrijava.Enabled = false;
 
-                    //Proizvodi frmDodaj = new Proizvodi();
-                    //frmDodaj.ShowDialog();
+                    
                     
 
                 }
@@ -134,7 +133,7 @@ namespace PrirodnaLjekarnaa
             {
                 sw.WriteLine("{0}|{1}", linijaIme, linijaPrezime);
 
-                MessageBox.Show("Uspješna registracija! Idite dalje na proizvode!");
+                MessageBox.Show("Uspješna registracija! Idite dalje!");
                 gbPrijava.Visible = false;
                 menuStrip1.Enabled = true;
                 buttonPrijava.Enabled = false;
@@ -152,6 +151,9 @@ namespace PrirodnaLjekarnaa
             sw.Close();
         }
 
-        
+        private void NaslovnaStranicaPL_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

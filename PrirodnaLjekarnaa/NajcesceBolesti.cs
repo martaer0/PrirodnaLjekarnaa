@@ -186,5 +186,10 @@ namespace PrirodnaLjekarnaa
             frmDodaj.ShowDialog();
             this.Close();
         }
+
+        private void NajcesceBolesti_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

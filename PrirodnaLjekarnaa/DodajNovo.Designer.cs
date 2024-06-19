@@ -103,9 +103,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(243, 286);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 18);
+            this.label7.Size = new System.Drawing.Size(75, 18);
             this.label7.TabIndex = 17;
-            this.label7.Text = "(U eurima)";
+            this.label7.Text = "(u eurima)";
             // 
             // tbCijena
             // 
@@ -356,6 +356,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DodajNovo";
             this.Text = "Dodaj novo";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DodajNovo_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

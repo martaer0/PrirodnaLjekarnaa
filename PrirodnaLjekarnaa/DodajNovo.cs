@@ -36,7 +36,7 @@ namespace PrirodnaLjekarnaa
             if (rbCajevi.Checked)
             {
                 string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
-                File.AppendAllText("..\\..\\Cajevi.txt", linija + Environment.NewLine);
+                File.AppendAllText("..\\..\\Cajevi.txt", Environment.NewLine + linija);
 
                 tbimeProizvoda.Text = "";
                 tbLjekovitaSvojstva.Text = "";
@@ -49,7 +49,7 @@ namespace PrirodnaLjekarnaa
             else if (rbSokoviSirupi.Checked)
             {
                 string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
-                File.AppendAllText("..\\..\\SokoviiSirupi.txt", linija + Environment.NewLine);
+                File.AppendAllText("..\\..\\SokoviiSirupi.txt", Environment.NewLine + linija);
 
                 tbimeProizvoda.Text = "";
                 tbLjekovitaSvojstva.Text = "";
@@ -61,7 +61,7 @@ namespace PrirodnaLjekarnaa
             else if (rbEtericnaUlja.Checked)
             {
                 string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
-                File.AppendAllText("..\\..\\EtericnaUlja.txt", linija + Environment.NewLine);
+                File.AppendAllText("..\\..\\EtericnaUlja.txt", Environment.NewLine + linija);
 
                 tbimeProizvoda.Text = "";
                 tbLjekovitaSvojstva.Text = "";
@@ -73,7 +73,7 @@ namespace PrirodnaLjekarnaa
             else if (rbKremeMasti.Checked)
             {
                 string linija = ImeProizvoda + "|" + LjekovitaSvojstva + "|" + Opis + "|" + Cijena;
-                File.AppendAllText("..\\..\\KremeiMasti.txt", linija + Environment.NewLine);
+                File.AppendAllText("..\\..\\KremeiMasti.txt", Environment.NewLine + linija);
 
                 tbimeProizvoda.Text = "";
                 tbLjekovitaSvojstva.Text = "";
@@ -144,7 +144,9 @@ namespace PrirodnaLjekarnaa
             this.Close();
         }
 
+        private void DodajNovo_FormClosed(object sender, FormClosedEventArgs e)
+        {
 
-
+        }
     }
 }

@@ -61,6 +61,7 @@ namespace PrirodnaLjekarnaa
             this.doktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.najčešćeBolestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -69,6 +70,7 @@ namespace PrirodnaLjekarnaa
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label4);
@@ -357,6 +359,15 @@ namespace PrirodnaLjekarnaa
             this.oNamaToolStripMenuItem.Text = "O nama";
             this.oNamaToolStripMenuItem.Click += new System.EventHandler(this.oNamaToolStripMenuItem_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(196, 224);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 16);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "(u eurima)";
+            // 
             // Proizvodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -369,6 +380,7 @@ namespace PrirodnaLjekarnaa
             this.Controls.Add(this.panel1);
             this.Name = "Proizvodi";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Proizvodi_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -413,6 +425,7 @@ namespace PrirodnaLjekarnaa
         private System.Windows.Forms.ToolStripMenuItem najčešćeBolestiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

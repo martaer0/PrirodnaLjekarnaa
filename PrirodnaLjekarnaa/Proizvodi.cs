@@ -242,6 +242,9 @@ namespace PrirodnaLjekarnaa
             this.Close();
         }
 
-        
+        private void Proizvodi_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }
